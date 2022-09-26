@@ -1,0 +1,32 @@
+[
+    {
+        "id": "1",
+        "name": "Demo Product Title",
+        "image": "https://i.ibb.co/cc43CD3/4product.webp",
+        "price":"99"
+       
+    },
+    {
+        "id": "2",
+        "name": "Demo Product Title",
+        "image": "https://i.ibb.co/F36hcGL/3product.webp",
+        "price":"99"
+       
+    },
+    {
+        "id": "3",
+        "name": "Demo Product Title",
+        "image": "https://i.ibb.co/pyMzFqg/2product.webp",
+        "price":"99"
+       
+    },
+    {
+        "id": "4",
+        "name": "Demo Product Title",
+        "image": "https://i.ibb.co/n76KdZY/1product.webp",
+        "price":"99"
+       
+    }
+ 
+
+]

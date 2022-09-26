@@ -17,7 +17,7 @@ import { Autoplay, Pagination } from "swiper";
 
 
 export default function App() {
-  
+
   return (
     <>
       <Swiper
@@ -46,7 +46,20 @@ export default function App() {
 
               </div>
 
-              <img src={img} className="translate-y-6  rounded-lg w-screen transform transition duration-500 hover:scale-150"  />
+              <img src={img} className="translate-y-6 rounded-lg w-screen transform transition duration-500 hover:scale-150 relative" />
+
+              <div >
+                <ul className="absolute">
+                  <li className="text-3xl" data-aos="fade-down-right"
+                    data-aos-duration="3000">Popular</li>
+
+                  <li className="text-3xl my-2" data-aos="fade-down-right"
+                    data-aos-duration="2000">Scale</li>
+                  <li className="text-3xl" data-aos="fade-down-right"
+                    data-aos-duration="1000">New</li>
+                </ul>
+              </div>
+
 
               {/* data-aos="fade-up"
                 data-aos-duration="3000" */}
@@ -75,7 +88,7 @@ export default function App() {
                   data-aos-duration="3000">Explore</h1>
                 <h1 className="text-5xl font-bold">Your Beauty</h1>
               </div>
-              <img  src={img2} className=" rounded-lg w-3/6 w-screen transform transition duration-500 hover:scale-110" />
+              <img src={img2} className=" rounded-lg w-3/6 w-screen transform transition duration-500 hover:scale-110" />
 
             </div>
           </div>
