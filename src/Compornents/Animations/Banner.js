@@ -32,11 +32,15 @@ export default function App() {
           <div className="hero h-screen bg-yellow-50">
             <div className="hero-content flex-col lg:flex-row-reverse">
               <div>
-                <h1 className="text-5xl font-bold">Explore</h1>
+                <h1 className="text-8xl font-bold" data-aos="zoom-in-up"
+                  data-aos-duration="3000">Explore</h1>
                 <h1 className="text-5xl font-bold">Your Beauty</h1>
 
+                <button className="btn">SHOP-NOW</button>
+
               </div>
-              <img src={img} className=" rounded-lg w-screen" />
+              <img data-aos="fade-up"
+                data-aos-duration="3000" src={img} className="rounded-lg w-screen" />
 
             </div>
           </div>
@@ -45,10 +49,12 @@ export default function App() {
           <div className="hero h-screen bg-green-50">
             <div className="hero-content flex-col lg:flex-row-reverse">
               <div>
-                <h1 className="text-5xl font-bold">Explore</h1>
+                <h1 className="text-8xl font-bold" data-aos="zoom-in-up"
+                  data-aos-duration="3000">Explore</h1>
                 <h1 className="text-5xl font-bold">Your Beauty</h1>
               </div>
-              <img src={img1} className=" rounded-lg w-3/6" />
+              <img data-aos="fade-up"
+                data-aos-duration="3000" src={img1} className=" rounded-lg w-3/6" />
 
             </div>
           </div>
@@ -57,10 +63,12 @@ export default function App() {
           <div className="hero h-screen bg-blue-50">
             <div className="hero-content flex-col lg:flex-row-reverse">
               <div>
-                <h1 className="text-5xl font-bold">Explore</h1>
+                <h1 className="text-8xl font-bold" data-aos="zoom-in-up"
+                  data-aos-duration="3000">Explore</h1>
                 <h1 className="text-5xl font-bold">Your Beauty</h1>
               </div>
-              <img src={img2} className=" rounded-lg w-3/6" />
+              <img data-aos="zoom-in-up"
+                data-aos-duration="3000" src={img2} className=" rounded-lg w-3/6" />
 
             </div>
           </div>
