@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { TransformComponent, TransformWrapper } from 'react-zoom-pan-pinch';
 
 const Service = () => {
   const { detailsId } = useParams();
@@ -22,7 +23,12 @@ const Service = () => {
   return (
     <div className='pt-20'>
       <h1>hello{newResult?.name}</h1>
-      <img src={newResult?.image} alt='image' />
+      {/* <img src={newResult?.image} alt='image' /> */}
+      <TransformWrapper>
+        <TransformComponent>
+        <img src={newResult?.image} alt='image' />
+        </TransformComponent>
+      </TransformWrapper>
     </div>
   );
 };

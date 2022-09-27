@@ -14,6 +14,7 @@ import "./style.css";
 
 // import required modules
 import { Autoplay, Pagination } from "swiper";
+import { TransformComponent, TransformWrapper } from "react-zoom-pan-pinch";
 
 
 export default function App() {
@@ -46,7 +47,11 @@ export default function App() {
 
               </div>
 
-              <img src={img} className="translate-y-6 rounded-lg w-screen transform transition duration-500 hover:scale-150 relative" />
+              <TransformWrapper>
+                <TransformComponent>
+                  <img src={img} className="translate-y-6 rounded-lg w-screen transform transition duration-500 hover:scale-150 relative" />
+                </TransformComponent>
+              </TransformWrapper>
 
               <div >
                 <ul className="absolute">
@@ -75,7 +80,7 @@ export default function App() {
                   data-aos-duration="3000">Explore</h1>
                 <h1 className="text-5xl font-bold">Your Beauty</h1>
               </div>
-              <img src={img1} className=" rounded-lg w-3/6 w-screen transform transition duration-500 hover:scale-110" />
+              <img src={img1} className=" rounded-lg w-2/5 w-screen transform transition duration-500 hover:scale-110" />
 
             </div>
           </div>
@@ -88,7 +93,7 @@ export default function App() {
                   data-aos-duration="3000">Explore</h1>
                 <h1 className="text-5xl font-bold">Your Beauty</h1>
               </div>
-              <img src={img2} className=" rounded-lg w-3/6 w-screen transform transition duration-500 hover:scale-110" />
+              <img src={img2} className=" rounded-lg w-2/5 w-screen transform transition duration-500 hover:scale-110" />
 
             </div>
           </div>
