@@ -1,7 +1,8 @@
 [
     {
         "id": "1",
-        "name": "Demo Product Title",
+        "name": "Excellent Cream",
+        "title": "This is the large title for testing large title and there is an image for testing",
         "image": "https://i.ibb.co/XVNTn4M/2.png",
         "price":"99"
        
@@ -9,6 +10,7 @@
     {
         "id": "2",
         "name": "Demo Product Title",
+        "title": "This is the large title for testing large title and there is an image for testing",
         "image": "https://i.ibb.co/rt711bm/3.png",
         "price":"99"
        
@@ -16,6 +18,7 @@
     {
         "id": "3",
         "name": "Demo Product Title",
+        "title": "This is the large title for testing large title and there is an image for testing",
         "image": "https://i.ibb.co/rf5gcsF/1.png",
         "price":"99"
        
@@ -23,6 +26,7 @@
     {
         "id": "4",
         "name": "Demo Product Title",
+        "title": "This is the large title for testing large title and there is an image for testing",
         "image": "https://i.ibb.co/vBGvxXG/4.png",
         "price":"99"
        
@@ -30,13 +34,15 @@
     {
         "id": "5",
         "name": "Demo Product Title",
+        "title": "This is the large title for testing large title and there is an image for testing",
         "image": "https://i.ibb.co/G7m1Vyb/5.png",
         "price":"99"
        
     },
     {
         "id": "6",
-        "name": "Demo Product Title",
+        "name": "Variable with soldout product",
+        "title": "This is the large title for testing large title and there is an image for testing",
         "image": "https://i.ibb.co/wzn0Vw5/6.png",
         "price":"99"
        

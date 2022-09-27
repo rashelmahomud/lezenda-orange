@@ -1,19 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { Controlled as ControlledZoom } from 'react-medium-image-zoom'
-import { TransformComponent, TransformWrapper } from 'react-zoom-pan-pinch';
-// Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/effect-cube";
-import "swiper/css/pagination";
-
-import "./Details.css";
-
-// import required modules
-import { EffectCube, Pagination } from "swiper";
 
 const Service = () => {
   const { detailsId } = useParams();
@@ -40,59 +26,76 @@ const Service = () => {
 
 
   return (
-    <div className='flex'>
-
-      <div className='pt-20 mx-auto text-center'>
-        <h1>hello{newResult?.name}</h1>
-        <h1 className='text-3xl'>CHOSES YOUR PRODCUT COLOR</h1>
+    <div className='grid lg:grid-cols-2 sm:grid-cols-1 md:grid-cols-1 lg:p-20'>
+      <div className='mt-20 mx-auto text-center'>
+        <img className='w-auto' src={newResult?.image} alt='' />
 
       </div>
 
-      <div>
-        <Swiper
-          effect={"cube"}
-          grabCursor={true}
-          cubeEffect={{
-            shadow: true,
-            slideShadows: true,
-            shadowOffset: 20,
-            shadowScale: 0.94,
-          }}
-          pagination={true}
-          modules={[EffectCube, Pagination]}
-          className="mySwiper products-detail"
-        >
-          <SwiperSlide className='produt-details'>
-            <TransformWrapper>
-              <TransformComponent>
-                <img src={newResult?.image} alt='image' />
-              </TransformComponent>
-            </TransformWrapper>
-          </SwiperSlide>
-          <SwiperSlide>
-            <TransformWrapper>
-              <TransformComponent>
-                <img src={newResult?.image} alt='image' />
-              </TransformComponent>
-            </TransformWrapper>
-          </SwiperSlide>
-          <SwiperSlide>
-            <TransformWrapper>
-              <TransformComponent>
-                <img src={newResult?.image} alt='image' />
-              </TransformComponent>
-            </TransformWrapper>
-          </SwiperSlide>
-          <SwiperSlide>
-            <TransformWrapper>
-              <TransformComponent>
-                <img src={newResult?.image} alt='image' />
-              </TransformComponent>
-            </TransformWrapper>
-          </SwiperSlide>
+      <div className='mt-20 text-center text-justify p-3'>
+        <h1 className='text-5xl font-bold font-sans'>{newResult?.name}</h1>
+        <h1 className='text-4xl font-bold font-mono'>{newResult?.title}</h1>
+        <div>
+          <div className=' my-3 flex gap-4 text-slate-700'>
+            <div className="rating">
+              <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-500" />
+              <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-500" />
+              <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+              <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" checked />
+              <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
 
-        </Swiper>
+            </div>
+            <h1 className=''>7 reviews</h1>
+          </div>
+
+          <div className=' my-3 flex gap-4 text-slate-700'>
+            <div>
+              <del>$21.00</del>
+              <span className='mx-2 font-bold text-2xl'>${newResult?.price}</span>
+
+            </div>
+            <button class="btn btn-sm rounded-full">Save-10%</button>
+          </div>
+
+          <div className=' my-3 flex gap-4 text-slate-700'>
+            <div>
+
+              <span className='mx-2 font-bold hover:text-red-700'> Shipping</span>
+
+            </div>
+            <h2 className='hover:text-red-700 '>Ask About This Product</h2>
+          </div>
+
+          <div className=' mt-10 flex gap-4 '>
+            <div>
+              <span className='mx-2 text-2xl font-bold text-slate-700'> Color :</span>
+            </div>
+
+            <div>
+              <div className="tooltip" data-tip="red">
+                <button className="btn btn-sm border-none rounded-full w-8 bg-red-600"></button>
+              </div>
+              <div className="tooltip mx-2" data-tip="yellow">
+                <button className="btn btn-sm border-none rounded-full w-8 bg-yellow-700"></button>
+              </div>
+              <div className="tooltip mx-2" data-tip="green">
+                <button className="btn btn-sm border-none rounded-full w-8 bg-green-700"></button>
+              </div>
+              <div className="tooltip" data-tip="black">
+                <button className="btn btn-sm border-none rounded-full w-8 bg-black-700"></button>
+              </div>
+
+            </div>
+          </div>
+
+
+          <div></div>
+        </div>
+
       </div>
+
+
+
     </div>
   );
 };
