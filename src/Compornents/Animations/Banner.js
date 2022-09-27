@@ -47,11 +47,8 @@ export default function App() {
 
               </div>
 
-              <TransformWrapper>
-                <TransformComponent>
                   <img src={img} className="translate-y-6 rounded-lg w-screen transform transition duration-500 hover:scale-150 relative" />
-                </TransformComponent>
-              </TransformWrapper>
+         
 
               <div >
                 <ul className="absolute">
