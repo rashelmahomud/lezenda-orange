@@ -63,10 +63,11 @@ const Service = () => {
           className="mySwiper products-detail"
         >
           <SwiperSlide className='produt-details'>
-            <img src={newResult?.image} alt='image' />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={newResult?.image} alt='image' />
+            <TransformWrapper>
+              <TransformComponent>
+                <img src={newResult?.image} alt='image' />
+              </TransformComponent>
+            </TransformWrapper>
           </SwiperSlide>
           <SwiperSlide>
             <TransformWrapper>
@@ -76,8 +77,20 @@ const Service = () => {
             </TransformWrapper>
           </SwiperSlide>
           <SwiperSlide>
-            <img src={newResult?.image} alt='image' />
+            <TransformWrapper>
+              <TransformComponent>
+                <img src={newResult?.image} alt='image' />
+              </TransformComponent>
+            </TransformWrapper>
           </SwiperSlide>
+          <SwiperSlide>
+            <TransformWrapper>
+              <TransformComponent>
+                <img src={newResult?.image} alt='image' />
+              </TransformComponent>
+            </TransformWrapper>
+          </SwiperSlide>
+
         </Swiper>
       </div>
     </div>
