@@ -33,8 +33,8 @@ const Service = () => {
       </div>
 
       <div className='mt-20 text-center text-justify p-3'>
-        <h1 className='text-5xl font-bold font-sans'>{newResult?.name}</h1>
-        <h1 className='text-4xl font-bold font-mono'>{newResult?.title}</h1>
+        <h1 className='text-3xl font-bold font-sans text-slate-700'>{newResult?.name}</h1>
+        <h1 className='text-2xl font-bold font-mono text-slate-700'>{newResult?.title}</h1>
         <div>
           <div className=' my-3 flex gap-4 text-slate-700'>
             <div className="rating">
@@ -88,8 +88,22 @@ const Service = () => {
             </div>
           </div>
 
+          <div className=' my-3 flex gap-4 text-slate-700'>
+            <div>
+              <button class="btn rounded-none hover:bg-white hover:text-black">ADD TO CARD</button>
+            </div>
 
-          <div></div>
+
+            <div className="rating gap-1 btn hover:bg-white bg-blue-600">
+              <input type="radio" name="rating-3" className="mask mask-heart btn" />
+
+            </div>
+          </div>
+
+
+          <div>
+            <button className='btn w-full bg-yellow-200 text-black border-none hover:text-white my-3'>BUY IT NOW</button>
+          </div>
         </div>
 
       </div>
