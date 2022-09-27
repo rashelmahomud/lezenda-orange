@@ -1,9 +1,20 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import Services from '../../Pages/Product/Services'
 
 const Service = () => {
   const { detailsId } = useParams();
   const [isZoomed, setIsZoomed] = useState(false)
+
+  const [count, setCount] = useState(0);
+
+  const handelPlus = () => {
+    setCount(count => count + 1);
+  }
+  const handelMinus = () => {
+    setCount(count => count - 1);
+  }
+
 
   const handleZoomChange = useCallback(shouldZoom => {
     setIsZoomed(shouldZoom)
@@ -20,8 +31,6 @@ const Service = () => {
   }, [])
 
   const newResult = details?.find((s) => s.id === detailsId)
-
-
   console.log(newResult?.name);
 
 
@@ -88,6 +97,20 @@ const Service = () => {
             </div>
           </div>
 
+          <div className=' my-3 flex gap-4 text-2xl text-slate-700'>
+            <div>
+              <h1>Quantity:</h1>
+            </div>
+
+
+            <div>
+              <button onClick={handelPlus}> + </button>
+              <span className='mx-5'>{count} </span>
+              <button onClick={handelMinus}> - </button>
+
+            </div>
+          </div>
+
           <div className=' my-3 flex gap-4 text-slate-700'>
             <div>
               <button class="btn rounded-none hover:bg-white hover:text-black">ADD TO CARD</button>
@@ -108,7 +131,7 @@ const Service = () => {
 
       </div>
 
-
+    
 
     </div>
   );
