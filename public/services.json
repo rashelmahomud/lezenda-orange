@@ -2,28 +2,42 @@
     {
         "id": "1",
         "name": "Demo Product Title",
-        "image": "https://i.ibb.co/cc43CD3/4product.webp",
+        "image": "https://i.ibb.co/XVNTn4M/2.png",
         "price":"99"
        
     },
     {
         "id": "2",
         "name": "Demo Product Title",
-        "image": "https://i.ibb.co/F36hcGL/3product.webp",
+        "image": "https://i.ibb.co/rt711bm/3.png",
         "price":"99"
        
     },
     {
         "id": "3",
         "name": "Demo Product Title",
-        "image": "https://i.ibb.co/pyMzFqg/2product.webp",
+        "image": "https://i.ibb.co/rf5gcsF/1.png",
         "price":"99"
        
     },
     {
         "id": "4",
         "name": "Demo Product Title",
-        "image": "https://i.ibb.co/n76KdZY/1product.webp",
+        "image": "https://i.ibb.co/vBGvxXG/4.png",
+        "price":"99"
+       
+    },
+    {
+        "id": "5",
+        "name": "Demo Product Title",
+        "image": "https://i.ibb.co/G7m1Vyb/5.png",
+        "price":"99"
+       
+    },
+    {
+        "id": "6",
+        "name": "Demo Product Title",
+        "image": "https://i.ibb.co/wzn0Vw5/6.png",
         "price":"99"
        
     }

@@ -8,7 +8,7 @@ import ServiceTwo from '../Pages/ServiceTwo';
 const Home = () => {
     return (
         <div>
-            <Banner></Banner>
+            <Banner />
             <ServiceOne />
             <ServiceTwo />
             <ServiceThree />

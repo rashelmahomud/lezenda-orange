@@ -1,19 +1,84 @@
 import React, { useEffect, useState } from 'react';
-import Service from './Service';
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
+import './Service.css';
+import { Pagination } from "swiper";
+import { useNavigate } from 'react-router-dom';
 const Services = () => {
-    const [service,setService] = useState([]);
+    const [service, setService] = useState([]);
     useEffect(() => {
-        fetch('services.json')
-        .then(res => res.json())
-        .then(data => setService(data))
-    } ,[])
+        fetch('/services.json')
+            .then(res => res.json())
+            .then(data => setService(data))
+    }, [])
+
+    const navigate = useNavigate();
+
+    const handelDetails = id => {
+        navigate(`/detailsService/${id}`);
+    }
+
+
     return (
         <div>
-            <h1>helo</h1>
-            {
-                service.map(s => <Service key={s.id} s={s}></Service>)
-            }
+            <div className='text-center my-10'>
+                <h1 className='text-5xl text-stone-700'>New Arrivals</h1>
+                <h1 className='font-bold text-stone-600'>Section Title Description</h1>
+            </div>
+            <>
+                <Swiper
+                    slidesPerView={1}
+                    spaceBetween={10}
+                    pagination={{
+                        clickable: true,
+                    }}
+                    breakpoints={{
+                        "@0.00": {
+                            slidesPerView: 1,
+                            spaceBetween: 10,
+                        },
+                        "@0.75": {
+                            slidesPerView: 2,
+                            spaceBetween: 20,
+                        },
+                        "@1.00": {
+                            slidesPerView: 3,
+                            spaceBetween: 40,
+                        },
+                        "@1.50": {
+                            slidesPerView: 4,
+                            spaceBetween: 50,
+                        },
+                    }}
+                    modules={[Pagination]}
+                    className="mySwiper"
+                >
+
+                    {
+                        service.map(s => <>
+                    
+                            <SwiperSlide className='swiperSlides '>
+                            
+                                <div className="card w-96 bg-base-100">
+                                    <div onClick={() => handelDetails(s.id)}  className="card-body hover:shadow-xl hover:-translate-y-5  transform transition duration-300">
+                                        <img src={s.image} />
+                                        <h2 className="card-title mx-auto">{s.name}</h2>
+                                        <p>Price: ${s.price}</p>
+
+                                    </div>
+                                </div>
+                            </SwiperSlide>
+                        
+
+                        </>)
+                    }
+
+                </Swiper>
+            </>
+
         </div>
     );
 };
