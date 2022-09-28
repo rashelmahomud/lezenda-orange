@@ -20,7 +20,7 @@ function App() {
         <Route path='/detailsService/:detailsId' element={<DetailsService></DetailsService>}></Route>
       </Routes>
 
-      {/* <Footer /> */}
+      <Footer />
       
     </div>
   );

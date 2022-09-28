@@ -64,9 +64,9 @@ const Services = () => {
                             
                                 <div className="card w-96 bg-base-100">
                                     <div onClick={() => handelDetails(s.id)}  className="card-body hover:shadow-xl hover:-translate-y-5  transform transition duration-300">
-                                        <img src={s.image} />
+                                        <img className='hover:outline-dashed outline-2 outline-offset-2' src={s.image} />
                                         <h2 className="card-title mx-auto">{s.name}</h2>
-                                        <p>Price: ${s.price}</p>
+                                        <p><del>$21.00</del> Price: ${s.price}</p>
 
                                     </div>
                                 </div>

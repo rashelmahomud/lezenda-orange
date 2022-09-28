@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import Services from '../../Pages/Product/Services'
+import { TransformComponent, TransformWrapper } from 'react-zoom-pan-pinch';
 
 const Service = () => {
   const { detailsId } = useParams();
@@ -37,7 +37,12 @@ const Service = () => {
   return (
     <div className='grid lg:grid-cols-2 sm:grid-cols-1 md:grid-cols-1 lg:p-20'>
       <div className='mt-20 mx-auto text-center'>
-        <img className='w-auto' src={newResult?.image} alt='' />
+        <TransformWrapper>
+          <TransformComponent>
+            <img className='' src={newResult?.image} alt='' />
+
+          </TransformComponent>
+        </TransformWrapper>
 
       </div>
 
@@ -117,7 +122,7 @@ const Service = () => {
             </div>
 
 
-            <div className="rating gap-1 btn hover:bg-white bg-blue-600">
+            <div className="rating gap-1 btn hover:bg-white bg-blue-200">
               <input type="radio" name="rating-3" className="mask mask-heart btn" />
 
             </div>
@@ -131,7 +136,7 @@ const Service = () => {
 
       </div>
 
-    
+
 
     </div>
   );
