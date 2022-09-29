@@ -1,10 +1,12 @@
+import { faCircleInfo, faContactBook, faShop, faShoppingBag, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
 
     return (
-        <div className="navbar fixed top-0 w-full z-50 lg:px-10  bg-base-200 bg-opacity-30 backdrop-filter backdrop-blur-lg">
+        <div className="navbar fixed top-0 w-full z-50 lg:px-10  bg-yellow-100 bg-opacity-30 backdrop-filter backdrop-blur-lg">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -19,23 +21,22 @@ const Header = () => {
                                 <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
                             </a>
                             <ul className="p-2">
-                                <li><a>Submenu 1</a></li>
-                                <li><a>Submenu 2</a></li>
-                                <li><a>Submenu 3</a></li>
-                                <li><a>Submenu 4</a></li>
+                                <li><Link to='/shop'><FontAwesomeIcon icon={faShop} /> Shop</Link></li>
+                                <li><Link to='/shop'><FontAwesomeIcon icon={faShop} /> Shop</Link></li>
+                                <li><Link to='/shop'><FontAwesomeIcon icon={faShop} /> Shop</Link></li>
                             </ul>
                         </li>
                         <li><Link to='/blog'>Blog</Link></li>
                         <li tabIndex={0}>
-                        <a>
-                            Pages
-                            <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg>
-                        </a>
-                        <ul className="p-2">
-                            <li><a>Submenu 1</a></li>
-                            <li><a>Submenu 2</a></li>
-                        </ul>
-                    </li>
+                            <a>
+                                Pages
+                                <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg>
+                            </a>
+                            <ul className="p-2">
+                                <li><Link to='/'><FontAwesomeIcon icon={faCircleInfo} /> About</Link></li>
+                                <li><Link to='/'><FontAwesomeIcon icon={faContactBook} />Contact US</Link></li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
                 {/* <a className="btn btn-ghost normal-case text-xl">Lezanda</a> */}
@@ -43,18 +44,17 @@ const Header = () => {
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">
-                <li><Link to='/'>Home</Link></li>
-                <li><Link to='/shop'>Shop</Link></li>
+                    <li><Link to='/'>Home</Link></li>
+                    <li><Link to='/shop'>Shop</Link></li>
                     <li tabIndex={0}>
                         <a>
                             Catagory
                             <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg>
                         </a>
                         <ul className="p-2">
-                            <li><a>Submenu 1</a></li>
-                            <li><a>Submenu 2</a></li>
-                            <li><a>Submenu 3</a></li>
-                            <li><a>Submenu 4</a></li>
+                            <li><Link to='/shop'><FontAwesomeIcon icon={faShop} /> Shop</Link></li>
+                            <li><Link to='/shop'><FontAwesomeIcon icon={faShop} /> Shop</Link></li>
+                            <li><Link to='/shop'><FontAwesomeIcon icon={faShop} /> Shop</Link></li>
                         </ul>
                     </li>
                     <li><Link to='/blog'>Blog</Link></li>
@@ -64,14 +64,15 @@ const Header = () => {
                             <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg>
                         </a>
                         <ul className="p-2">
-                            <li><a>Submenu 1</a></li>
-                            <li><a>Submenu 2</a></li>
+
+                            <li><Link to='/'><FontAwesomeIcon icon={faCircleInfo} /> About</Link></li>
+                            <li><Link to='/'><FontAwesomeIcon icon={faContactBook} />Contact US</Link></li>
                         </ul>
                     </li>
                 </ul>
             </div>
-            <div className="navbar-end">
-                <a className="">MY CART</a>
+            <div className="navbar-end gap-2">
+                <Link to='/'><FontAwesomeIcon icon={faShoppingCart} /> MY CART</Link>
             </div>
         </div>
     );

@@ -9,13 +9,13 @@ import DetailsService from './Compornents/Pages/Product/DetailsService'
 
 function App() {
   return (
-    <div>
+    <div className="pt-16">
       <Header></Header>
 
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/shop' element={<Shop></Shop>}></Route>
-        <Route path='/shop' element={<Blogs></Blogs>}></Route>
+        <Route path='/blog' element={<Blogs></Blogs>}></Route>
         <Route path='/services' element={<Services></Services>}></Route>
         <Route path='/detailsService/:detailsId' element={<DetailsService></DetailsService>}></Route>
       </Routes>

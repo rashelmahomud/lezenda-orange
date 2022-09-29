@@ -74,7 +74,7 @@ export default function App() {
             <div className="hero-content flex-col lg:flex-row-reverse">
               <div>
                 <h1 className="text-8xl font-bold" data-aos="zoom-in-up"
-                  data-aos-duration="3000 font-roboto">Explore</h1>
+                  data-aos-duration="3000 font-roboto font-mon">Explore</h1>
                 <h1 className="text-5xl font-bold font-mon">Your Beauty</h1>
               </div>
               <img src={img1} className=" rounded-lg w-2/5 w-screen transform transition duration-500 hover:scale-110" />
@@ -87,7 +87,7 @@ export default function App() {
             <div className="hero-content flex-col lg:flex-row-reverse">
               <div>
                 <h1 className="text-8xl font-bold" data-aos="zoom-in-up"
-                  data-aos-duration="3000">Explore</h1>
+                  data-aos-duration="3000 font-mon">Explore</h1>
                 <h1 className="text-5xl font-bold">Your Beauty</h1>
               </div>
               <img src={img2} className=" rounded-lg w-2/5 w-screen transform transition duration-500 hover:scale-110" />
