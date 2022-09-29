@@ -1,4 +1,4 @@
-import { faCircleInfo, faContactBook, faShop, faShoppingBag, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import { faBaby, faBlog, faCircleInfo, faContactBook, faHatCowboySide, faSatelliteDish, faShop, faShoppingBag, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { Link } from 'react-router-dom';
@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const Header = () => {
 
     return (
-        <div className="navbar fixed top-0 w-full z-50 lg:px-10  bg-yellow-100 bg-opacity-30 backdrop-filter backdrop-blur-lg">
+        <div className="navbar fixed top-0 w-full z-50 lg:px-10  bg-yellow-50 bg-opacity-30 backdrop-filter backdrop-blur-lg">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -22,8 +22,11 @@ const Header = () => {
                             </a>
                             <ul className="p-2">
                                 <li><Link to='/shop'><FontAwesomeIcon icon={faShop} /> Shop</Link></li>
-                                <li><Link to='/shop'><FontAwesomeIcon icon={faShop} /> Shop</Link></li>
-                                <li><Link to='/shop'><FontAwesomeIcon icon={faShop} /> Shop</Link></li>
+                                <li><Link to='/shop'><FontAwesomeIcon icon={faHatCowboySide} /> Jeans</Link></li>
+                                <li><Link to='/shop'><FontAwesomeIcon icon={faSatelliteDish} /> Beauty</Link></li>
+                                <li><Link to='/shop'><FontAwesomeIcon icon={faBaby} /> Babys</Link></li>
+                                <li><Link to='/blog'><FontAwesomeIcon icon={faBlog} /> Blogs</Link></li>
+
                             </ul>
                         </li>
                         <li><Link to='/blog'>Blog</Link></li>
@@ -53,8 +56,10 @@ const Header = () => {
                         </a>
                         <ul className="p-2">
                             <li><Link to='/shop'><FontAwesomeIcon icon={faShop} /> Shop</Link></li>
-                            <li><Link to='/shop'><FontAwesomeIcon icon={faShop} /> Shop</Link></li>
-                            <li><Link to='/shop'><FontAwesomeIcon icon={faShop} /> Shop</Link></li>
+                            <li><Link to='/shop'><FontAwesomeIcon icon={faHatCowboySide} /> Jeans</Link></li>
+                            <li><Link to='/shop'><FontAwesomeIcon icon={faSatelliteDish} /> Beauty</Link></li>
+                            <li><Link to='/shop'><FontAwesomeIcon icon={faBaby} /> Babys</Link></li>
+                            <li><Link to='/blog'><FontAwesomeIcon icon={faBlog} /> Blogs</Link></li>
                         </ul>
                     </li>
                     <li><Link to='/blog'>Blog</Link></li>
