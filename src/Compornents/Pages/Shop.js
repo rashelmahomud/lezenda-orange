@@ -1,9 +1,10 @@
 import React from 'react';
+import ServiceThreeDetails from './Product/ServiceThreeDetails';
 
 const Shop = () => {
     return (
         <div>
-            <h2>Hello</h2>
+            <ServiceThreeDetails></ServiceThreeDetails>
         </div>
     );
 };

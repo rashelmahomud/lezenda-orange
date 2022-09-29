@@ -15,6 +15,7 @@ import "./style.css";
 // import required modules
 import { Autoplay, Pagination } from "swiper";
 import { TransformComponent, TransformWrapper } from "react-zoom-pan-pinch";
+import { Link } from "react-router-dom";
 
 
 export default function App() {
@@ -43,12 +44,12 @@ export default function App() {
                 <h1 data-aos="zoom-in-left"
                   data-aos-duration="3000" className="text-5xl font-bold">Your Beauty</h1>
 
-                <button className="btn translate-y-6">SHOP-NOW</button>
+                <Link to='/shop'>  <button className="btn translate-y-6 btn rounded-none hover:bg-white hover:text-black">SHOP-NOW</button></Link>
 
               </div>
 
-                  <img src={img} className="translate-y-6 rounded-lg w-screen transform transition duration-500 hover:scale-150 relative" />
-         
+              <img src={img} className="translate-y-6 rounded-lg w-screen transform transition duration-500 hover:scale-150 relative" />
+
 
               <div >
                 <ul className="absolute">
@@ -76,6 +77,8 @@ export default function App() {
                 <h1 className="text-8xl font-bold" data-aos="zoom-in-up"
                   data-aos-duration="3000 font-roboto font-mon">Explore</h1>
                 <h1 className="text-5xl font-bold font-mon">Your Beauty</h1>
+                <Link to='/shop'>  <button className="btn translate-y-6 btn rounded-none hover:bg-white hover:text-black">SHOP-NOW</button></Link>
+
               </div>
               <img src={img1} className=" rounded-lg w-2/5 w-screen transform transition duration-500 hover:scale-110" />
 
@@ -89,6 +92,9 @@ export default function App() {
                 <h1 className="text-8xl font-bold" data-aos="zoom-in-up"
                   data-aos-duration="3000 font-mon">Explore</h1>
                 <h1 className="text-5xl font-bold">Your Beauty</h1>
+                <Link to='/shop'>  <button className="btn translate-y-6 btn rounded-none hover:bg-white hover:text-black">SHOP-NOW</button></Link>
+
+
               </div>
               <img src={img2} className=" rounded-lg w-2/5 w-screen transform transition duration-500 hover:scale-110" />
 
