@@ -21,12 +21,11 @@ const Header = () => {
                                 <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
                             </a>
                             <ul className="p-2">
-                                <li><Link to='/shop'><FontAwesomeIcon icon={faShop} /> Shop</Link></li>
-                                <li><Link to='/shop'><FontAwesomeIcon icon={faHatCowboySide} /> Jeans</Link></li>
-                                <li><Link to='/shop'><FontAwesomeIcon icon={faSatelliteDish} /> Beauty</Link></li>
-                                <li><Link to='/shop'><FontAwesomeIcon icon={faBaby} /> Babys</Link></li>
-                                <li><Link to='/blog'><FontAwesomeIcon icon={faBlog} /> Blogs</Link></li>
-
+                                <li><Link to='/shop'><FontAwesomeIcon className='text-green-500' icon={faShop} /> Shop</Link></li>
+                                <li><Link to='/shop'><FontAwesomeIcon className='text-yellow-500' icon={faHatCowboySide} /> Jeans</Link></li>
+                                <li><Link to='/shop'><FontAwesomeIcon className='text-blue-500' icon={faSatelliteDish} /> Beauty</Link></li>
+                                <li><Link to='/shop'><FontAwesomeIcon className='text-red-500' icon={faBaby} /> Babys</Link></li>
+                                <li><Link to='/blog'><FontAwesomeIcon className='text-black-400' icon={faBlog} /> Blogs</Link></li>
                             </ul>
                         </li>
                         <li><Link to='/blog'>Blog</Link></li>
@@ -36,8 +35,8 @@ const Header = () => {
                                 <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg>
                             </a>
                             <ul className="p-2">
-                                <li><Link to='/'><FontAwesomeIcon icon={faCircleInfo} /> About</Link></li>
-                                <li><Link to='/'><FontAwesomeIcon icon={faContactBook} />Contact US</Link></li>
+                                <li><Link to='/'><FontAwesomeIcon className='text-green-500' icon={faCircleInfo} /> About</Link></li>
+                                <li><Link to='/'><FontAwesomeIcon className='text-red-500' icon={faContactBook} />Contact US</Link></li>
                             </ul>
                         </li>
                     </ul>
@@ -55,11 +54,11 @@ const Header = () => {
                             <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg>
                         </a>
                         <ul className="p-2">
-                            <li><Link to='/shop'><FontAwesomeIcon icon={faShop} /> Shop</Link></li>
-                            <li><Link to='/shop'><FontAwesomeIcon icon={faHatCowboySide} /> Jeans</Link></li>
-                            <li><Link to='/shop'><FontAwesomeIcon icon={faSatelliteDish} /> Beauty</Link></li>
-                            <li><Link to='/shop'><FontAwesomeIcon icon={faBaby} /> Babys</Link></li>
-                            <li><Link to='/blog'><FontAwesomeIcon icon={faBlog} /> Blogs</Link></li>
+                            <li><Link to='/shop'><FontAwesomeIcon className='text-green-500' icon={faShop} /> Shop</Link></li>
+                            <li><Link to='/shop'><FontAwesomeIcon className='text-yellow-500' icon={faHatCowboySide} /> Jeans</Link></li>
+                            <li><Link to='/shop'><FontAwesomeIcon className='text-blue-500' icon={faSatelliteDish} /> Beauty</Link></li>
+                            <li><Link to='/shop'><FontAwesomeIcon className='text-red-500' icon={faBaby} /> Babys</Link></li>
+                            <li><Link to='/blog'><FontAwesomeIcon className='text-black-400' icon={faBlog} /> Blogs</Link></li>
                         </ul>
                     </li>
                     <li><Link to='/blog'>Blog</Link></li>
@@ -70,8 +69,8 @@ const Header = () => {
                         </a>
                         <ul className="p-2">
 
-                            <li><Link to='/'><FontAwesomeIcon icon={faCircleInfo} /> About</Link></li>
-                            <li><Link to='/'><FontAwesomeIcon icon={faContactBook} />Contact US</Link></li>
+                            <li><Link to='/'><FontAwesomeIcon className='text-green-500' icon={faCircleInfo} /> About</Link></li>
+                            <li><Link to='/'><FontAwesomeIcon className='text-red-500' icon={faContactBook} />Contact US</Link></li>
                         </ul>
                     </li>
                 </ul>
