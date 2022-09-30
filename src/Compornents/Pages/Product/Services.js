@@ -7,13 +7,23 @@ import "swiper/css/navigation";
 import './Service.css';
 import { Pagination } from "swiper";
 import { useNavigate } from 'react-router-dom';
+import { useQuery } from 'react-query';
 const Services = () => {
-    const [service, setService] = useState([]);
-    useEffect(() => {
-        fetch('/services.json')
-            .then(res => res.json())
-            .then(data => setService(data))
-    }, [])
+    // const [service, setService] = useState([]);
+
+    // useEffect(() => {
+    //     fetch('/services.json')
+    //         .then(res => res.json())
+    //         .then(data => setService(data))
+    // }, [])
+
+
+    const { isLoading, error, data: service } = useQuery(['service'], () =>
+        fetch('services.json').then(res =>
+            res.json()
+        )
+    )
+
 
     const navigate = useNavigate();
 
@@ -21,6 +31,9 @@ const Services = () => {
         navigate(`/detailsService/${id}`);
     }
 
+    if (isLoading) {
+        return <h1>hello Loding..</h1>
+    }
 
     return (
         <div>
@@ -58,23 +71,23 @@ const Services = () => {
                 >
 
                     {
-                        service.map(s => <>
+                        service?.map(s => <>
 
                             <SwiperSlide className='swiperSlides '>
 
                                 <div className="card w-96 bg-base-100">
-                                    <div onClick={() => handelDetails(s.id)} className="card-body hover:shadow-xl hover:-translate-y-5  transform transition duration-300">
+                                    <div onClick={() => handelDetails(s?.id)} className="card-body hover:shadow-xl hover:-translate-y-5  transform transition duration-300">
 
                                         <div>
                                             <div className="rating absolute ml-24 z-10 mt-5">
                                                 <input type="radio" name="rating-3" className="mask mask-heart bg-red-300 " />
                                             </div>
 
-                                            <img className='hover:outline-dashed outline-2 outline-offset-2 relative' src={s.image} />
+                                            <img className='hover:outline-dashed outline-2 outline-offset-2 relative' src={s?.image} />
                                         </div>
 
-                                        <h2 className="card-title mx-auto">{s.name}</h2>
-                                        <p><del>$21.00</del> Price: ${s.price}</p>
+                                        <h2 className="card-title mx-auto">{s?.name}</h2>
+                                        <p><del>$21.00</del> Price: ${s?.price}</p>
 
                                     </div>
                                 </div>
