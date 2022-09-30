@@ -34,9 +34,9 @@ const Footer = () => {
                 </div>
                 <div className="md:place-self-center md:justify-self-end">
                     <div className="grid grid-flow-col gap-4">
-                        <Link to='/'><i class="fa-brands fa-facebook "></i></Link>
-                        <Link to='/'><i class="fa-brands fa-linkedin"></i></Link>
-                        <Link to='/'><i class="fa-brands fa-instagram"></i></Link>
+                        <Link to='/'><i className="fa-brands fa-facebook "></i></Link>
+                        <Link to='/'><i className="fa-brands fa-linkedin"></i></Link>
+                        <Link to='/'><i className="fa-brands fa-instagram"></i></Link>
                     </div>
                 </div>
             </footer>

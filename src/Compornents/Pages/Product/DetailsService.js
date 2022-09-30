@@ -69,7 +69,7 @@ const Service = () => {
               <span className='mx-2 font-bold text-2xl'>${newResult?.price}</span>
 
             </div>
-            <button class="btn btn-sm rounded-full">Save-10%</button>
+            <button className="btn btn-sm rounded-full">Save-10%</button>
           </div>
 
           <div className=' my-3 flex gap-4 text-slate-700'>
@@ -119,7 +119,7 @@ const Service = () => {
 
           <div className=' my-3 flex gap-4 text-slate-700'>
             <div>
-              <button class="btn rounded-none hover:bg-white hover:text-black">ADD TO CARD</button>
+              <button className="btn rounded-none hover:bg-white hover:text-black">ADD TO CARD</button>
             </div>
 
 
