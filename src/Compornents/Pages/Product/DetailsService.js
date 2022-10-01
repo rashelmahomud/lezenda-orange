@@ -3,6 +3,7 @@ import { useQuery } from 'react-query';
 import { useParams } from 'react-router-dom';
 import { TransformComponent, TransformWrapper } from 'react-zoom-pan-pinch';
 
+import bgImg from './dService.css'
 const Service = () => {
   const { detailsId } = useParams();
   const [isZoomed, setIsZoomed] = useState(false)
@@ -36,7 +37,7 @@ const Service = () => {
 
 
   return (
-    <div className='grid lg:grid-cols-2 sm:grid-cols-1 md:grid-cols-1 lg:p-20'>
+    <div className='grid lg:grid-cols-2 sm:grid-cols-1 md:grid-cols-1 lg:p-20 '>
       <div className='mt-20 mx-auto text-center'>
         <TransformWrapper>
           <TransformComponent>
@@ -47,7 +48,8 @@ const Service = () => {
 
       </div>
 
-      <div className='mt-20 text-center text-justify p-3'>
+      <div className='mt-20 text-center text-justify p-3 bgbanner'>
+        <div className='bg-opacity-30 backdrop-filter backdrop-blur-lg'>
         <h1 className='text-3xl font-bold font-sans text-slate-700'>{newResult?.name}</h1>
         <h1 className='text-2xl font-bold font-mono text-slate-700'>{newResult?.title}</h1>
         <div>
@@ -133,6 +135,7 @@ const Service = () => {
           <div>
             <button className='btn w-full bg-yellow-200 text-black border-none hover:text-white my-3'>BUY IT NOW</button>
           </div>
+        </div>
         </div>
 
       </div>

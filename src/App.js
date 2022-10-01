@@ -8,6 +8,7 @@ import Header from './Compornents/Shared/Header';
 import DetailsService from './Compornents/Pages/Product/DetailsService'
 import ServiceThreeDetails from './Compornents/Pages/Product/ServiceThreeDetails';
 import ServiceThree from './Compornents/Pages/ServiceThree';
+import Product from './Compornents/Pages/AllProduct/Product';
 
 function App() {
   return (
@@ -22,10 +23,11 @@ function App() {
         <Route path='/detailsService/:detailsId' element={<DetailsService></DetailsService>}></Route>
         <Route path='/serviceThree' element={<ServiceThree></ServiceThree>}></Route>
         <Route path='/serviceThree/serviceThreeDetails' element={<ServiceThreeDetails></ServiceThreeDetails>}></Route>
+        <Route path='/product' element={<Product></Product>}></Route>
       </Routes>
 
       <Footer />
-      
+
     </div>
   );
 }

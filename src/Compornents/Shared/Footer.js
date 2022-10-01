@@ -1,3 +1,4 @@
+import { faArrowCircleUp } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { Link } from 'react-router-dom';
@@ -5,6 +6,10 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
     return (
         <div>
+            <div className=''>
+                <FontAwesomeIcon className='fixed button-20%' icon={faArrowCircleUp} />
+            </div>
+           
             <footer className="footer mt-10 p-10 bg-base-200 text-base-content">
                 <div>
                     <span className="footer-title">Services</span>

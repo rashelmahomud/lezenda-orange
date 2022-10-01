@@ -4,7 +4,6 @@ import Services from '../Pages/Product/Services';
 import ServiceOne from '../Pages/ServiceOne';
 import ServiceThree from '../Pages/ServiceThree';
 import ServiceTwo from '../Pages/ServiceTwo';
-import Footer from '../Shared/Footer';
 
 const Home = () => {
     return (
