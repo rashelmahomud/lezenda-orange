@@ -15,7 +15,7 @@ const Product = () => {
     const searchText = (e) => {
         // event.prevenDefault();
         setQuery(e.target.value);
-        const searchProduct = product.filter(p => p.name.includes(query));
+        const searchProduct = product.filter(p => p.name.toLowerCase().includes(query.toLowerCase()));
         setSearchProduct(searchProduct);
     }
 
