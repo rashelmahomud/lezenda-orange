@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import img from '../../Assates/banner/df.png'
+import img from '../../Assates/banner/slideshow-h5-1.webp'
 import img1 from '../../Assates/banner/slid-img-4.webp'
 import img2 from '../../Assates/banner/slide-img-3.webp'
 import { motion } from "framer-motion";
@@ -33,43 +33,28 @@ export default function App() {
         modules={[Autoplay, Pagination]}
         className="mySwiper"
       >
+
+
         <SwiperSlide>
+          <div className="hero h-screen ">
+            <div className="z-10 absolute mb-20">
+              <h1 className="text-8xl font-bold" data-aos="zoom-in-up"
+                data-aos-duration="3000 font-mon">Explore</h1>
+              <h1 data-aos="zoom-in-left"
+                data-aos-duration="3000" className="text-5xl font-bold">Your Beauty</h1>
 
+              <Link to='/shop'>  <button className="btn translate-y-6 btn rounded-none hover:bg-white hover:text-black">SHOP-NOW</button></Link>
 
-          <div className="hero h-screen bg-yellow-50">
-            <div className="hero-content flex-col lg:flex-row-reverse">
-              <div>
-                <h1 className="text-8xl font-bold" data-aos="zoom-in-up"
-                  data-aos-duration="3000 font-mon">Explore</h1>
-                <h1 data-aos="zoom-in-left"
-                  data-aos-duration="3000" className="text-5xl font-bold">Your Beauty</h1>
+            </div>
 
-                <Link to='/shop'>  <button className="btn translate-y-6 btn rounded-none hover:bg-white hover:text-black">SHOP-NOW</button></Link>
+            <div className=" flex-col lg:flex-row-reverse">
+              <img src={img} className="relative" />
 
-              </div>
-
-              <img src={img} className="translate-y-6 rounded-lg w-screen transform transition duration-500 hover:scale-150 relative" />
-
-
-              <div >
-                <ul className="absolute">
-                  <li className="text-3xl" data-aos="fade-down-right"
-                    data-aos-duration="3000">Popular</li>
-
-                  <li className="text-3xl my-2" data-aos="fade-down-right"
-                    data-aos-duration="2000">Scale</li>
-                  <li className="text-3xl" data-aos="fade-down-right"
-                    data-aos-duration="1000">New</li>
-                </ul>
-              </div>
-
-
-              {/* data-aos="fade-up"
-                data-aos-duration="3000" */}
             </div>
           </div>
 
         </SwiperSlide>
+
         <SwiperSlide>
           <div className="hero h-screen bg-green-50">
             <div className="hero-content flex-col lg:flex-row-reverse">

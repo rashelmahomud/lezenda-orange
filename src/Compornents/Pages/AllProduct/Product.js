@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
 import { useQuery } from 'react-query';
+import Loading from '../../Shared/Loading';
 import Products from './Products';
 
 const Product = () => {
     const [query, setQuery] = useState('');
     const [searchProduct, setSearchProduct] = useState([]);
 
-    const { data: product, isLoading } = useQuery(['product'], () => fetch('/product.json').then(res => res.json()))
+    const { data: product, isLoading, isFetching } = useQuery(['product'], () => fetch('/product.json').then(res => res.json()))
 
     if (isLoading) {
-        return 'Loading...'
+        return <Loading></Loading>
     }
 
     const searchText = (e) => {
@@ -29,7 +30,6 @@ const Product = () => {
             </div>
 
             <div className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5'>
-
 
                 {
                     searchProduct.length ? searchProduct.map(pdc => <Products key={pdc.id} pdc={pdc}></Products>) : product.map(pdc => <Products key={pdc.id} pdc={pdc}></Products>)

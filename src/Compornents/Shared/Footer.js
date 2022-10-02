@@ -1,15 +1,27 @@
 import { faArrowCircleUp } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
+// import BackToTop from "react-back-to-top";
+import BackToTop from 'react-back-to-top-button'
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
         <div>
-            <div className=''>
-                <FontAwesomeIcon className='fixed button-20%' icon={faArrowCircleUp} />
-            </div>
-           
+
+
+            <BackToTop
+                showOnScrollUp
+                showAt={100}
+                speed={1500}
+                easing="easeInOutQuint"
+            >
+                <div className='fixed bottom-10 right-10 text-info text-2xl'>
+                    <a href='#top' className='z-50' ><FontAwesomeIcon icon={faArrowCircleUp} /></a>
+                </div>
+            </BackToTop>
+
+
             <footer className="footer mt-10 p-10 bg-base-200 text-base-content">
                 <div>
                     <span className="footer-title">Services</span>
