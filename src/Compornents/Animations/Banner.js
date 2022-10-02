@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import img from '../../Assates/banner/slideshow-h5-1.webp'
+import img from '../../Assates/Home-img/dd-removebg-preview.png'
 import img1 from '../../Assates/banner/slid-img-4.webp'
 import img2 from '../../Assates/banner/slide-img-3.webp'
 import { motion } from "framer-motion";
@@ -36,23 +36,19 @@ export default function App() {
 
 
         <SwiperSlide>
-          <div className="hero h-screen ">
-            <div className="z-10 absolute mb-20">
-              <h1 className="text-8xl font-bold" data-aos="zoom-in-up"
-                data-aos-duration="3000 font-mon">Explore</h1>
-              <h1 data-aos="zoom-in-left"
-                data-aos-duration="3000" className="text-5xl font-bold">Your Beauty</h1>
+          <div className="hero h-screen bg-image">
+            <div className="hero-content flex-col lg:flex-row-reverse">
+              <div>
+                <h1 className="text-8xl font-bold" data-aos="zoom-in-up"
+                  data-aos-duration="3000 font-roboto font-mon">Explore</h1>
+                <h1 className="text-5xl font-bold font-mon">Your Beauty</h1>
+                <Link to='/shop'>  <button className="btn translate-y-6 btn rounded-none hover:bg-white hover:text-black">SHOP-NOW</button></Link>
 
-              <Link to='/shop'>  <button className="btn translate-y-6 btn rounded-none hover:bg-white hover:text-black">SHOP-NOW</button></Link>
-
-            </div>
-
-            <div className=" flex-col lg:flex-row-reverse">
-              <img src={img} className="relative" />
+              </div>
+              <img src={img} className=" rounded-lg w-11/12 w-screen transform transition duration-500 hover:scale-150" />
 
             </div>
           </div>
-
         </SwiperSlide>
 
         <SwiperSlide>
