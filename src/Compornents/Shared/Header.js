@@ -76,8 +76,6 @@ const Header = ({ handleThemeChange, theme }) => {
                 </ul>
             </div>
 
-
-
             <div className="navbar-end gap-2">
                 {/* theme icon started here  */}
                 <button
