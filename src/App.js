@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom';
+import { json, Route, Routes } from 'react-router-dom';
 import Home from './Compornents/Home/Home';
 import Blogs from './Compornents/Pages/Blogs';
 import Services from './Compornents/Pages/Product/Services';
@@ -9,11 +9,24 @@ import DetailsService from './Compornents/Pages/Product/DetailsService'
 import ServiceThreeDetails from './Compornents/Pages/Product/ServiceThreeDetails';
 import ServiceThree from './Compornents/Pages/ServiceThree';
 import Product from './Compornents/Pages/AllProduct/Product';
+import { useEffect, useState } from 'react';
 
 function App() {
+
+  const [ theme,setTheme] = useState(false);
+
+  useEffect( () => {
+    setTheme(JSON.parse(window.localStorage.getItem("theme")));
+  } ,[])
+
+  const handleThemeChange = () => {
+    setTheme(!theme);
+    window.localStorage.setItem("theme", !theme);
+  };
+
   return (
-    <div className="mt-16">
-      <Header></Header>
+    <div data-theme={theme && "my_dark"} className="mt-16">
+      <Header handleThemeChange={handleThemeChange} theme={theme}></Header>
 
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>

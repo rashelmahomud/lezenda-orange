@@ -1,12 +1,12 @@
-import { faBaby, faBlog, faCircleInfo, faContactBook, faHatCowboySide, faSatelliteDish, faShop, faShoppingBag, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import { faBaby, faBlog, faCircleInfo, faContactBook, faHatCowboySide, faSatelliteDish, faShop, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Header = () => {
+const Header = ({handleThemeChange,theme}) => {
 
     return (
-        <div className="navbar fixed top-0 w-full z-50 lg:px-10  bg-yellow-50 bg-opacity-30 backdrop-filter backdrop-blur-lg">
+        <div className="navbar fixed top-0 w-full z-50 lg:px-10 bg-yellow-50 bg-opacity-30 backdrop-filter backdrop-blur-lg">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -75,6 +75,18 @@ const Header = () => {
                     </li>
                 </ul>
             </div>
+            {/* theme icon started here  */}
+            <button
+
+                onClick={handleThemeChange}
+                className="rounded-full lg:mx-2 font-bold pr-2">
+
+                {theme ? <FontAwesomeIcon className='text-green-500' icon={faCircleInfo} /> : <FontAwesomeIcon className='text-red-500' icon={faContactBook} />}
+
+            </button>
+
+            {/* theme icon Ends here  */}
+
             <div className="navbar-end gap-2">
                 <Link to='/'><FontAwesomeIcon icon={faShoppingCart} /> MY CART</Link>
             </div>
