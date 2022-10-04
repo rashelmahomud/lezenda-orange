@@ -7,7 +7,7 @@ const Product = () => {
     const [query, setQuery] = useState('');
     const [searchProduct, setSearchProduct] = useState([]);
 
-    const { data: product, isLoading, isFetching } = useQuery(['product'], () => fetch('/product.json').then(res => res.json()))
+    const { data: product, isLoading } = useQuery(['product'], () => fetch('/product.json').then(res => res.json()))
 
     if (isLoading) {
         return <Loading></Loading>

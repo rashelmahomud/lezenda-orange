@@ -1,10 +1,8 @@
-import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import img from '../../Assates/Home-img/dd-removebg-preview.png'
 import img1 from '../../Assates/banner/slid-img-4.webp'
 import img2 from '../../Assates/banner/slide-img-3.webp'
-import { motion } from "framer-motion";
 
 // Import Swiper styles
 import "swiper/css";
@@ -14,7 +12,6 @@ import "./style.css";
 
 // import required modules
 import { Autoplay, Pagination } from "swiper";
-import { TransformComponent, TransformWrapper } from "react-zoom-pan-pinch";
 import { Link } from "react-router-dom";
 
 
