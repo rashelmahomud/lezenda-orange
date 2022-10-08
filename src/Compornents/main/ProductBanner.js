@@ -3,7 +3,12 @@ import './pbanner.css'
 const ProductBanner = () => {
     return (
         <div className="background-image ProductBanner">
-            <h1>hello banner</h1>
+            <div className='text-8xl font-mon text-center lg:p-36'>
+                <h1 >SUPER</h1>
+                <h1 className='text-6xl'>Quality Brand</h1>
+
+            </div>
+
         </div>
     );
 };
