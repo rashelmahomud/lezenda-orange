@@ -35,6 +35,7 @@ const ProductDetails = () => {
 
                     </TransformComponent>
                 </TransformWrapper>
+                
 
             </div>
 

@@ -1,0 +1,8 @@
+.ProductBanner {
+    background-image: url('../../Assates/banner/bg-banner-v5.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    background-attachment: fixed;
+
+}
