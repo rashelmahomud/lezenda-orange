@@ -1,0 +1,8 @@
+.subBanner {
+    background-image: url('../../../Assates/banner/ff.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 70vh;
+    background-attachment: fixed;
+
+}
