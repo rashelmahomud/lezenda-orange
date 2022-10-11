@@ -58,7 +58,7 @@ export default function App() {
                 <Link to='/shop'>  <button className="btn translate-y-6 btn rounded-none hover:bg-white hover:text-black">SHOP-NOW</button></Link>
 
               </div>
-              <img src={img1} className=" rounded-lg w-2/5 w-screen transform transition duration-500 hover:scale-110" />
+              <img src={img1} className=" rounded-lg w-2/5 transform transition duration-500 hover:scale-110" />
 
             </div>
           </div>
@@ -74,7 +74,7 @@ export default function App() {
 
 
               </div>
-              <img src={img2} className=" rounded-lg w-2/5 w-screen transform transition duration-500 hover:scale-110" />
+              <img src={img2} className=" rounded-lg w-2/5 transform transition duration-500 hover:scale-110" />
 
             </div>
           </div>
