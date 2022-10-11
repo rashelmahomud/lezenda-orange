@@ -42,7 +42,7 @@ export default function App() {
                 <Link to='/shop'>  <button className="btn translate-y-6 btn rounded-none hover:bg-white hover:text-black">SHOP-NOW</button></Link>
 
               </div>
-              <img src={img} className="rounded-lg w-auto w-screen transform transition duration-500 hover:scale-150" />
+              <img src={img} className="rounded-lg w-96 w-screen transform transition duration-500 hover:scale-150" />
 
             </div>
           </div>
