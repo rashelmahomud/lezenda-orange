@@ -7,6 +7,7 @@ import Services from '../Pages/Product/Services';
 import ServiceOne from '../Pages/ServiceOne';
 import ServiceThree from '../Pages/ServiceThree';
 import ServiceTwo from '../Pages/ServiceTwo';
+import Sproduct from '../Pages/SuperProduct/Sproduct';
 
 const Home = () => {
     return (
@@ -15,6 +16,7 @@ const Home = () => {
             <ServiceOne />
             <ServiceTwo />
             <ServiceThree />
+            <Sproduct />
             <Services />
             <Submain />
             <ProductBanner />
