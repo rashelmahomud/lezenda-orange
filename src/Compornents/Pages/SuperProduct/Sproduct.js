@@ -4,14 +4,14 @@ import Product from './Product';
 
 const Sproduct = () => {
 
-    const { data,id} = useQuery(['sproduct'], () => fetch('services.json').then(res => res.json()))
+    const { data } = useQuery(['sproduct'], () => fetch('superData.json').then(res => res.json()))
 
 
     return (
-        <div className='grid grid-cols-3 gap-4 my-10'>
-
+        <div className='w-8/12 mx-auto grid grid-flow-col grid-rows-2 gap-8 my-10 overflow-hidden'>
+        
             {
-                data?.map(s => <Product key={s.id} s={s}></Product>)
+                data?.slice(0, 4).map(s => <Product key={s.id} s={s}></Product>)
             }
         </div>
     );

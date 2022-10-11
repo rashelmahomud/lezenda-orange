@@ -1,0 +1,54 @@
+[
+    {
+        "id": "1",
+        "name": "Excellent Cream",
+        "title": "This is the large title for testing large title and there is an image for testing",
+        "image": "https://cdn.shopify.com/s/files/1/0009/3080/7852/files/col5_540x.jpg?v=1629611061",
+        "imageType": "Img-1",
+        "price":"99"
+       
+    },
+    {
+        "id": "2",
+        "name": "Demo Product Title",
+        "title": "This is the large title for testing large title and there is an image for testing",
+        "image": "https://cdn.shopify.com/s/files/1/0009/3080/7852/files/col6_180x.jpg?v=1629611101",
+        "price":"99"
+       
+    },
+    {
+        "id": "3",
+        "name": "Demo Product Title",
+        "title": "This is the large title for testing large title and there is an image for testing",
+        "image": "https://cdn.shopify.com/s/files/1/0009/3080/7852/files/col7_180x.jpg?v=1629611135",
+        "price":"99"
+       
+    },
+    {
+        "id": "4",
+        "name": "Demo Product Title",
+        "title": "This is the large title for testing large title and there is an image for testing",
+        "image": "https://cdn.shopify.com/s/files/1/0009/3080/7852/files/col8_180x.jpg?v=1629611159",
+        "imageType": "Img-4",
+        "price":"99"
+       
+    },
+    {
+        "id": "5",
+        "name": "Demo Product Title",
+        "title": "This is the large title for testing large title and there is an image for testing",
+        "image": "https://i.ibb.co/G7m1Vyb/5.png",
+        "price":"99"
+       
+    },
+    {
+        "id": "6",
+        "name": "Variable with soldout product",
+        "title": "This is the large title for testing large title and there is an image for testing",
+        "image": "https://i.ibb.co/wzn0Vw5/6.png",
+        "price":"99"
+       
+    }
+ 
+
+]

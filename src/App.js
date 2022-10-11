@@ -26,7 +26,7 @@ function App() {
   };
 
   return (
-    <div data-theme={theme && "my_dark"} className="mt-16">
+    <div data-theme={theme && "my_dark"} className="pt-16">
       <Header handleThemeChange={handleThemeChange} theme={theme}></Header>
 
       <Routes>
