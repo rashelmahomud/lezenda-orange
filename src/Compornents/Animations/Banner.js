@@ -39,7 +39,7 @@ export default function App() {
                 <h1 className="text-8xl font-bold" data-aos="zoom-in-up"
                   data-aos-duration="3000 font-roboto font-mon">Explore</h1>
                 <h1 className="text-5xl font-bold font-mon">Your Beauty</h1>
-                <Link to='/shop'>  <button className="btn translate-y-6 btn rounded-none hover:bg-white hover:text-black">SHOP-NOW</button></Link>
+                <Link to='/shop'>  <button className="btn translate-y-6 btn-outline rounded-sm btn-secondary ml-2 rounded-none hover:bg-white text-black hover:text-black">SHOP-NOW</button></Link>
 
               </div>
               <img src={img} className="rounded-lg w-3/4 transform transition duration-500 hover:scale-150" />
@@ -55,7 +55,7 @@ export default function App() {
                 <h1 className="text-8xl font-bold" data-aos="zoom-in-up"
                   data-aos-duration="3000 font-roboto font-mon">Explore</h1>
                 <h1 className="text-5xl font-bold font-mon">Your Beauty</h1>
-                <Link to='/shop'>  <button className="btn translate-y-6 btn rounded-none hover:bg-white hover:text-black">SHOP-NOW</button></Link>
+                <Link to='/shop'>  <button className="btn translate-y-6 btn-outline rounded-sm btn-secondary ml-2 rounded-none  hover:bg-white text-black hover:text-black">SHOP-NOW</button></Link>
 
               </div>
               <img src={img1} className=" rounded-lg w-2/5 transform transition duration-500 hover:scale-110" />
@@ -70,7 +70,7 @@ export default function App() {
                 <h1 className="text-8xl font-bold" data-aos="zoom-in-up"
                   data-aos-duration="3000 font-mon">Explore</h1>
                 <h1 className="text-5xl font-bold">Your Beauty</h1>
-                <Link to='/shop'>  <button className="btn translate-y-6 btn rounded-none hover:bg-white hover:text-black">SHOP-NOW</button></Link>
+                <Link to='/shop'>  <button className="btn translate-y-6 btn rounded-none btn-outline rounded-sm btn-secondary ml-2  hover:bg-white text-black  hover:text-black">SHOP-NOW</button></Link>
 
 
               </div>
