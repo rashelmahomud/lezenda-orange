@@ -34,11 +34,11 @@ export default function App() {
 
         <SwiperSlide>
           <div className="hero h-screen bg-image">
-            <div className="hero-content flex-col lg:flex-row-reverse">
+            <div className="hero-content flex-col lg:flex-row-reverse gap-20">
               <div>
                 <h1 className="text-8xl font-bold" data-aos="zoom-in-up"
                   data-aos-duration="3000 font-roboto font-mon">Explore</h1>
-                <h1 className="text-5xl font-bold font-mon">Your Beauty</h1>
+                <h1 className="text-5xl font-bold font-mon mt-3">Your Beauty</h1>
                 <Link to='/shop'>  <button className="btn translate-y-6 btn-outline rounded-sm btn-secondary ml-2 rounded-none hover:bg-white text-black hover:text-black">SHOP-NOW</button></Link>
 
               </div>
@@ -50,12 +50,12 @@ export default function App() {
 
         <SwiperSlide>
           <div className="hero h-screen">
-            <div className="hero-content flex-col lg:flex-row-reverse">
+            <div className="hero-content flex-col lg:flex-row-reverse gap-20">
               <div>
                 <h1 className="text-8xl font-bold" data-aos="zoom-in-up"
-                  data-aos-duration="3000 font-roboto font-mon">Explore</h1>
-                <h1 className="text-5xl font-bold font-mon">Your Beauty</h1>
-                <Link to='/shop'>  <button className="btn translate-y-6 btn-outline rounded-sm btn-secondary ml-2 rounded-none  hover:bg-white text-black hover:text-black">SHOP-NOW</button></Link>
+                  data-aos-duration="5000 font-roboto font-mon">Explore</h1>
+                <h1 className="text-5xl font-bold font-mon mt-3">Your Beauty</h1>
+                <Link to='/shop'>  <button className="btn translate-y-6 btn-outline rounded-sm btn-secondary ml-2 rounded-none  hover:bg-white text-black hover:text-black">NEED-NOW</button></Link>
 
               </div>
               <img src={img1} className=" rounded-lg w-2/5 transform transition duration-500 hover:scale-110" />
@@ -65,12 +65,12 @@ export default function App() {
         </SwiperSlide>
         <SwiperSlide>
           <div className="hero h-screen">
-            <div className="hero-content flex-col lg:flex-row-reverse">
+            <div className="hero-content gap-20 flex-col lg:flex-row-reverse">
               <div>
                 <h1 className="text-8xl font-bold" data-aos="zoom-in-up"
                   data-aos-duration="3000 font-mon">Explore</h1>
-                <h1 className="text-5xl font-bold">Your Beauty</h1>
-                <Link to='/shop'>  <button className="btn translate-y-6 btn rounded-none btn-outline rounded-sm btn-secondary ml-2  hover:bg-white text-black  hover:text-black">SHOP-NOW</button></Link>
+                <h1 className="text-5xl font-bold mt-3">Your Beauty</h1>
+                <Link to='/shop'>  <button className="btn translate-y-6 btn rounded-none btn-outline rounded-sm btn-secondary ml-2  hover:bg-white text-black  hover:text-black">BUY-NOW</button></Link>
 
 
               </div>
