@@ -20,8 +20,6 @@ const Product = () => {
         setSearchProduct(searchProduct);
     }
 
-    console.log(query);
-
     return (
         <div>
             <div className='p-10 text-center'>

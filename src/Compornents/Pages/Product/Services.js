@@ -8,6 +8,7 @@ import './Service.css';
 import { Pagination } from "swiper";
 import { useNavigate } from 'react-router-dom';
 import { useQuery } from 'react-query';
+import Loading from '../../Shared/Loading';
 const Services = () => {
     // const [service, setService] = useState([]);
 
@@ -32,7 +33,7 @@ const Services = () => {
     }
 
     if (isLoading) {
-        return <h1>hello Loding..</h1>
+        return <Loading></Loading>
     }
 
     return (
