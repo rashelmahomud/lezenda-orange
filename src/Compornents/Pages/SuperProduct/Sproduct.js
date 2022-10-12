@@ -8,7 +8,7 @@ const Sproduct = () => {
 
 
     return (
-        <div className='w-8/12 mx-auto grid grid-flow-col grid-rows-2 gap-8 my-10 overflow-hidden'>
+        <div className='lg:w-8/12 mx-auto grid grid-flow-col grid-rows-2 gap-3 lg:gap-8 my-10 overflow-hidden'>
         
             {
                 data?.slice(0, 4).map(s => <Product key={s.id} s={s}></Product>)

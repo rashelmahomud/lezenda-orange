@@ -5,7 +5,7 @@ const Product = ({ s }) => {
     const { image, imageType, name } = s;
     return (
 
-        <div className={`border relative ${imageType === 'Img-1' ? 'col-span-2 row-span-2' : ''} ${imageType === 'Img-4' ? 'row-span-2' : ''} `}>
+        <div className={`border relative ${imageType === 'Img-1' ? 'lg:col-span-2 lg:row-span-2' : ''} ${imageType === 'Img-4' ? 'lg:row-span-2' : ''} `}>
             <Link to='/shop'>
                 <img className='h-full transform transition duration-500 hover:scale-110' src={image} alt='' />
             </Link>
