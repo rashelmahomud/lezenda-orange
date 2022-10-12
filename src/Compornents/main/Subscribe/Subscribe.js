@@ -5,7 +5,7 @@ const Subscribe = () => {
         <div className='subBanner2'>
 
             <div className='flex h-screen justify-center items-center'>
-                <div className='bg-opacity-30 backdrop-filter backdrop-blur-lg w-1/2 h-auto text-black p-5 lg:p-10 '>
+                <div className='bg-opacity-30 backdrop-filter backdrop-blur-lg h-auto text-black p-5 lg:p-10 '>
                     <h1 className='text-4xl font-sans'>Subscribe To Our Newsletter</h1>
                     <p className='lg:text-2xl'>Sign up for the weekly newsletter and build better ecommerce stores.</p>
                     <div className='my-3'>
