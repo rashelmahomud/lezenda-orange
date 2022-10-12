@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const Header = ({ handleThemeChange, theme }) => {
 
     return (
-        <div className="navbar fixed top-0 w-full z-50 text-black lg:px-10 bg-yellow-50 bg-opacity-30 backdrop-filter backdrop-blur-lg">
+        <div className="navbar fixed top-0 w-full z-50 lg:px-10 bg-yellow-50 bg-opacity-30 backdrop-filter backdrop-blur-lg">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
