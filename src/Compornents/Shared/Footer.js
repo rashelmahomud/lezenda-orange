@@ -8,6 +8,12 @@ import logo from '../../Assates/logo (2).png'
 
 
 const Footer = () => {
+
+
+    const date = new Date();
+    const year = date.getFullYear()
+
+
     return (
         <div>
 
@@ -48,8 +54,8 @@ const Footer = () => {
             </footer>
             <footer className="footer px-10 py-4 border-t bg-base-200 text-base-content border-base-300">
                 <div className="items-center grid-flow-col">
-                <img className='w-8' src={logo} />
-                    <p>Lezenda Orange <br />Providing reliable tech since 1992</p>
+                    <img className='w-8' src={logo} />
+                    <p>Lezenda Orange <br />2022-{year} Copyright &copy; Lezanda Orange.All rights resurve</p>
                 </div>
                 <div className="md:place-self-center md:justify-self-end">
                     <div className="grid grid-flow-col gap-4">
