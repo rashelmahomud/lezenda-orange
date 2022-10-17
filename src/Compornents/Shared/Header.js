@@ -2,6 +2,7 @@ import { faBaby, faBlog, faCircleInfo, faContactBook, faHatCowboySide, faMoon, f
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { Link } from 'react-router-dom';
+import logo from '../../Assates/logo (2).png'
 
 const Header = ({ handleThemeChange, theme }) => {
 
@@ -42,7 +43,7 @@ const Header = ({ handleThemeChange, theme }) => {
                     </ul>
                 </div>
                 {/* <a className="btn btn-ghost normal-case text-xl">Lezanda</a> */}
-                <Link to='/' className="btn btn-ghost normal-case text-xl">Lezanda</Link>
+                <Link to='/' className="btn btn-ghost normal-case text-xl"><img className='w-8' src={logo} /> Lezanda</Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">
