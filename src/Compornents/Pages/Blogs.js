@@ -39,7 +39,7 @@ const Blogs = () => {
                             </p>
                             <h1 className='text-2xl my-5'>Checkes</h1>
                             <p>
-                            It looks as if heritage checks are going nowhere for the season ahead. Balenciaga’s came via voluminous coats as seen here, while Victoria Beckham’s had a more traditional appeal. Anyone looking for floaty feminine styles should turn to Sonia Rykiel where they were bright and summer-ready. Burberry’s homage was perhaps the most overt – expect to see its check caps everywhere next season.
+                                It looks as if heritage checks are going nowhere for the season ahead. Balenciaga’s came via voluminous coats as seen here, while Victoria Beckham’s had a more traditional appeal. Anyone looking for floaty feminine styles should turn to Sonia Rykiel where they were bright and summer-ready. Burberry’s homage was perhaps the most overt – expect to see its check caps everywhere next season.
                             </p>
                         </div>
                     </div>
@@ -49,7 +49,7 @@ const Blogs = () => {
                     <div className='p-3'>
                         <h1> <i class="fa-solid fa-user"></i>  By : Lezada Organic Admin
 
-                            <span> <i class="fa-solid fa-calendar-days"></i> Dec 25, {year}</span></h1>
+                            <span> <i class="fa-solid fa-calendar-days"></i> Jun 05, {year}</span></h1>
                     </div>
                     <h3 className='text-2xl'>Perfect Perfume & Cologne</h3>
 
@@ -65,7 +65,7 @@ const Blogs = () => {
                             </p>
                             <h1 className='text-2xl my-5'>Checkes</h1>
                             <p>
-                            It looks as if heritage checks are going nowhere for the season ahead. Balenciaga’s came via voluminous coats as seen here, while Victoria Beckham’s had a more traditional appeal. Anyone looking for floaty feminine styles should turn to Sonia Rykiel where they were bright and summer-ready. Burberry’s homage was perhaps the most overt – expect to see its check caps everywhere next season.
+                                It looks as if heritage checks are going nowhere for the season ahead. Balenciaga’s came via voluminous coats as seen here, while Victoria Beckham’s had a more traditional appeal. Anyone looking for floaty feminine styles should turn to Sonia Rykiel where they were bright and summer-ready. Burberry’s homage was perhaps the most overt – expect to see its check caps everywhere next season.
                             </p>
                         </div>
                     </div>
