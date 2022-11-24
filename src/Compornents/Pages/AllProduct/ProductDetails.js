@@ -1,8 +1,8 @@
-import React, { useCallback, useState } from 'react';
+import React, { useState } from 'react';
 import { useQuery } from 'react-query';
 import { useParams } from 'react-router-dom';
-import { TransformComponent, TransformWrapper } from 'react-zoom-pan-pinch';
-
+import img from '../../../Assates/Home-img/dd.png'
+import './details.css'
 const ProductDetails = () => {
 
     const { pdId } = useParams();
@@ -11,7 +11,6 @@ const ProductDetails = () => {
 
 
     const newProduct = productData?.find((pd) => pd.id === pdId);
-    const [isZoomed, setIsZoomed] = useState(false)
 
     const [count, setCount] = useState(0);
 
@@ -22,20 +21,16 @@ const ProductDetails = () => {
         setCount(count => count - 1);
     }
 
-
-    const handleZoomChange = useCallback(shouldZoom => {
-        setIsZoomed(shouldZoom)
-    }, [])
     return (
         <div className='grid lg:grid-cols-2 sm:grid-cols-1 md:grid-cols-1 lg:p-20 '>
             <div className='mt-20 mx-auto text-center'>
-                <TransformWrapper>
-                    <TransformComponent>
-                        <img className='' src={newProduct?.image} alt='' />
 
-                    </TransformComponent>
-                </TransformWrapper>
-                
+                <figure>
+                    <div class="hover-animation">
+                        <img class="img-back" src={newProduct?.image} alt="" />
+                        <img class="img-front" src={img} alt="" />
+                    </div>
+                </figure>
 
             </div>
 
