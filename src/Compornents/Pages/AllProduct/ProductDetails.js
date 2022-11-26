@@ -28,7 +28,7 @@ const ProductDetails = () => {
                 <figure>
                     <div class="hover-animation">
                         <img class="img-back" src={newProduct?.image} alt="" />
-                        <img class="img-front" src={img} alt="" />
+                        <img class="img-front" src={newProduct?.image1} alt="" />
                     </div>
                 </figure>
 
