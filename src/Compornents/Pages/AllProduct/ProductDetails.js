@@ -1,7 +1,7 @@
+
 import React, { useState } from 'react';
 import { useQuery } from 'react-query';
-import { Link, Route, useParams } from 'react-router-dom';
-import Cart from '../../cart/Cart';
+import { Link, useParams } from 'react-router-dom';
 import './details.css'
 const ProductDetails = () => {
 
@@ -116,6 +116,7 @@ const ProductDetails = () => {
                                 <input type="radio" name="rating-3" className="mask mask-heart btn text-red-500" />
 
                             </div>
+
                         </div>
 
 
