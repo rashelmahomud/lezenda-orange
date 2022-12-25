@@ -24,12 +24,19 @@ const Blogs = () => {
                     T-Shirts as Minimalist Style
                     Shirt pent Color Picking Guide.
                 </div>
+                <div className='p-3'>
+
+                    <input className='border-b-4 py-2' type='text' placeholder='search your content'  />
+                    <i class="fa-solid fa-search"></i>
+                    
+
+                </div>
                 <h2 className='p-3 text-2xl'>Recent Post</h2>
 
                 <div class="my-2 p-3 lg:p-10 flex gap-5 border-b-2">
                     <div >
-                 <img className='w-32 h-40 cursor-pointer' src={blog} alt='' />
-            
+                        <img className='w-32 h-40 cursor-pointer' src={blog} alt='' />
+
                     </div>
                     <div className='border-b-2'>
                         <p>Ogranic Beatuty</p>
