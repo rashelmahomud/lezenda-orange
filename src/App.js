@@ -12,14 +12,15 @@ import Product from './Compornents/Pages/AllProduct/Product';
 import { useEffect, useState } from 'react';
 import ProductDetails from './Compornents/Pages/AllProduct/ProductDetails';
 import Payment from './Compornents/payment/Payment';
+import Forbiden from './Compornents/404/Forbiden';
 
 function App() {
 
-  const [ theme,setTheme] = useState(false);
+  const [theme, setTheme] = useState(false);
 
-  useEffect( () => {
+  useEffect(() => {
     setTheme(JSON.parse(window.localStorage.getItem("theme")));
-  } ,[])
+  }, [])
 
   const handleThemeChange = () => {
     setTheme(!theme);
@@ -43,6 +44,8 @@ function App() {
         <Route path='/paymentDetails' element={<Payment />} ></Route>
 
 
+
+        <Route path='*' element={<Forbiden />}></Route>
       </Routes>
 
       <Footer />
