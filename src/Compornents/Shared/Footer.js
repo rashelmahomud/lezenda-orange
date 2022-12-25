@@ -6,16 +6,13 @@ import BackToTop from 'react-back-to-top-button'
 import { Link } from 'react-router-dom';
 import logo from '../../Assates/logo (2).png'
 
-
 const Footer = () => {
-
 
     const date = new Date();
     const year = date.getFullYear();
 
     return (
         <div>
-
 
             <BackToTop
                 showOnScrollUp

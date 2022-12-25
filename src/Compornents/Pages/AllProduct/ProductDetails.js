@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useQuery } from 'react-query';
 import { useParams } from 'react-router-dom';
-import img from '../../../Assates/Home-img/dd.png'
 import './details.css'
 const ProductDetails = () => {
 

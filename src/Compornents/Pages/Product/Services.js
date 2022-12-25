@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -10,15 +9,6 @@ import { useNavigate } from 'react-router-dom';
 import { useQuery } from 'react-query';
 import Loading from '../../Shared/Loading';
 const Services = () => {
-    // const [service, setService] = useState([]);
-
-    // useEffect(() => {
-    //     fetch('/services.json')
-    //         .then(res => res.json())
-    //         .then(data => setService(data))
-    // }, [])
-
-
     const { isLoading, error, data: service } = useQuery(['service'], () =>
         fetch('services.json').then(res =>
             res.json()
@@ -35,6 +25,7 @@ const Services = () => {
     if (isLoading) {
         return <Loading></Loading>
     }
+
 
     return (
         <div>
@@ -79,12 +70,13 @@ const Services = () => {
                                 <div className="card w-96 bg-base-100">
                                     <div onClick={() => handelDetails(s?.id)} className="card-body hover:shadow-xl hover:-translate-y-5  transform transition duration-300">
 
-                                        <div>
-                                            <div className="rating absolute ml-24 z-10 mt-5">
-                                                <input type="radio" name="rating-3" className="mask mask-heart bg-red-300 " />
-                                            </div>
+                                        <div className="hello relative">
+                                            <img className='hover:outline-dashed outline-2 outline-offset-2' src={s?.image} />
+                                        </div>
+                                        <div className="rating absolute ml-10 z-10 mt-5 imgout">
 
-                                            <img className='hover:outline-dashed outline-2 outline-offset-2 relative' src={s?.image} />
+                                            <input type="radio" name="rating-3" className="mask mask-heart bg-red-300 " />
+
                                         </div>
 
                                         <h2 className="card-title mx-auto">{s?.name}</h2>
