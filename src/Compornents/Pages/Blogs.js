@@ -28,7 +28,8 @@ const Blogs = () => {
 
                 <div class="my-2 p-3 lg:p-10 flex gap-5 border-b-2">
                     <div >
-                        <img className='w-32 h-40 cursor-pointer' src={blog} alt='' />
+                 <img className='w-32 h-40 cursor-pointer' src={blog} alt='' />
+            
                     </div>
                     <div className='border-b-2'>
                         <p>Ogranic Beatuty</p>

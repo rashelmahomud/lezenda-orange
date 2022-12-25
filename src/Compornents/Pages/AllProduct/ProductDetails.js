@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useQuery } from 'react-query';
-import { useParams } from 'react-router-dom';
+import { Link, Route, useParams } from 'react-router-dom';
+import Cart from '../../cart/Cart';
 import './details.css'
 const ProductDetails = () => {
 
@@ -106,7 +107,8 @@ const ProductDetails = () => {
 
                         <div className=' my-3 flex gap-4'>
                             <div>
-                                <button className="btn rounded-none hover:bg-white hover:text-black">ADD TO CARD</button>
+                            <button className="btn rounded-none hover:bg-white text-teal-800 hover:text-black">ADD TO CARD</button>
+                   
                             </div>
 
 
@@ -118,7 +120,7 @@ const ProductDetails = () => {
 
 
                         <div>
-                            <button className='btn w-full bg-yellow-200 text-black border-none hover:text-white my-3'>BUY IT NOW</button>
+                            <Link to='/paymentDetails'><button className='btn w-full bg-yellow-200 text-black border-none hover:text-white my-3'>BUY IT NOW</button></Link>
                         </div>
                     </div>
                 </div>

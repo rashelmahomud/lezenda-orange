@@ -11,6 +11,7 @@ import ServiceThree from './Compornents/Pages/ServiceThree';
 import Product from './Compornents/Pages/AllProduct/Product';
 import { useEffect, useState } from 'react';
 import ProductDetails from './Compornents/Pages/AllProduct/ProductDetails';
+import Payment from './Compornents/payment/Payment';
 
 function App() {
 
@@ -39,6 +40,9 @@ function App() {
         <Route path='/serviceThree/serviceThreeDetails' element={<ServiceThreeDetails></ServiceThreeDetails>}></Route>
         <Route path='/product' element={<Product></Product>}></Route>
         <Route path='/productDetails/:pdId' element={<ProductDetails></ProductDetails>}></Route>
+        <Route path='/paymentDetails' element={<Payment />} ></Route>
+
+
       </Routes>
 
       <Footer />

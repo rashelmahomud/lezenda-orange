@@ -85,7 +85,7 @@ const Header = ({ handleThemeChange, theme }) => {
                     {theme ? <FontAwesomeIcon className='text-green-500' icon={faSun} /> : <FontAwesomeIcon className='text-red-500' icon={faMoon} />}
                 </button>
                 {/* theme icon Ends here  */}
-                <Link to='/'><FontAwesomeIcon icon={faShoppingCart} /> MY CART</Link>
+                <Link to='/cart'><FontAwesomeIcon icon={faShoppingCart} /> MY CART</Link>
             </div>
         </div>
     );
