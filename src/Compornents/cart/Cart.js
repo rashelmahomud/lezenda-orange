@@ -5,13 +5,18 @@ const Cart = ({ cart }) => {
 
 
     return (
-        <div className='grid lg:grid-cols-3 sm:grid-cols-1 md:grid-cols-1 lg:p-20 '>
+        <div className='max-w-full mx-auto'>
             {cart?.map(p => <div>
                 <div>
-                    <img src={p.image} alt='' />
-                    <h1>{p.name}</h1>
-                    <h3>{p.title}</h3>
-                    <p>Prise: {p.price}</p>
+
+                    <ul className='grid grid-cols-4 bg-red-50 border m-10 p-5'>
+                        <li><img className='w-24' src={p.image} alt='' /></li>
+                        <li><h1 className='font-bold text-2xl'>{p.name}</h1></li>
+                        <li><h3 className='font-bold'>{p.title}</h3></li>
+                        <li><p className='text-center font-bold'>Prise: {p.price}</p></li>
+                    </ul>
+                    
+
                 </div>
             </div>)}
         </div>
