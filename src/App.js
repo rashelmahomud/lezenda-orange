@@ -13,10 +13,12 @@ import { useEffect, useState } from 'react';
 import ProductDetails from './Compornents/Pages/AllProduct/ProductDetails';
 import Payment from './Compornents/payment/Payment';
 import Forbiden from './Compornents/404/Forbiden';
+import Cart from './Compornents/cart/Cart';
 
 function App() {
 
   const [theme, setTheme] = useState(false);
+  const [cart, setCart] = useState([]);
 
   useEffect(() => {
     setTheme(JSON.parse(window.localStorage.getItem("theme")));
@@ -36,12 +38,13 @@ function App() {
         <Route path='/shop' element={<Shop></Shop>}></Route>
         <Route path='/blog' element={<Blogs></Blogs>}></Route>
         <Route path='/services' element={<Services></Services>}></Route>
-        <Route path='/detailsService/:detailsId' element={<DetailsService></DetailsService>}></Route>
+        <Route path='/detailsService/:detailsId' element={<DetailsService ></DetailsService>}></Route>
         <Route path='/serviceThree' element={<ServiceThree></ServiceThree>}></Route>
         <Route path='/serviceThree/serviceThreeDetails' element={<ServiceThreeDetails></ServiceThreeDetails>}></Route>
         <Route path='/product' element={<Product></Product>}></Route>
-        <Route path='/productDetails/:pdId' element={<ProductDetails></ProductDetails>}></Route>
+        <Route path='/productDetails/:pdId' element={<ProductDetails setCart={setCart} cart={cart}></ProductDetails>}></Route>
         <Route path='/paymentDetails' element={<Payment />} ></Route>
+        <Route path='/cart' element={<Cart cart={cart} />}></Route>
 
 
 

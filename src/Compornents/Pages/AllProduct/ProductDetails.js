@@ -3,16 +3,17 @@ import React, { useState } from 'react';
 import { useQuery } from 'react-query';
 import { Link, useParams } from 'react-router-dom';
 import './details.css'
-const ProductDetails = () => {
+
+
+const ProductDetails = ({setCart, cart}) => {
 
     const { pdId } = useParams();
-
+    const [reting, setReting] = useState('');
     const { data: productData } = useQuery(['productDetails'], () => fetch('/product.json').then(res => res.json()));
-
 
     const newProduct = productData?.find((pd) => pd.id === pdId);
 
-    const [count, setCount] = useState(0);
+    const [count, setCount] = useState();
 
     const handelPlus = () => {
         setCount(count => count + 1);
@@ -21,7 +22,13 @@ const ProductDetails = () => {
         setCount(count => count - 1);
     }
 
+    const handelCart = (id) => {
+        setCart([...cart, id])
+        console.log(id);
+    }
+
     return (
+       
         <div className='grid lg:grid-cols-2 sm:grid-cols-1 md:grid-cols-1 lg:p-20 '>
             <div className='mt-20 mx-auto text-center'>
 
@@ -107,14 +114,13 @@ const ProductDetails = () => {
 
                         <div className=' my-3 flex gap-4'>
                             <div>
-                            <button className="btn rounded-none hover:bg-white text-teal-800 hover:text-black">ADD TO CARD</button>
-                   
+                                <button onClick={() => handelCart(newProduct)} className="btn rounded-none hover:bg-white text-teal-800 hover:text-black">ADD TO CARD</button>
+
                             </div>
 
 
-                            <div className="rating gap-1 btn hover:bg-white text-red-700">
-                                <input type="radio" name="rating-3" className="mask mask-heart btn text-red-500" />
-
+                            <div onClick={setReting} className="rating gap-1 btn hover:bg-white text-red-700">
+                                {reting ? (<input type="radio" name="rating-3" className="mask mask-heart btn text-red-500 bg-red-600" />) : (<input type="radio" name="rating-3" className="mask mask-heart btn text-red-500" />)}
                             </div>
 
                         </div>
@@ -131,6 +137,7 @@ const ProductDetails = () => {
 
 
         </div>
+     
     );
 };
 
