@@ -18,7 +18,7 @@ import Cart from './Compornents/cart/Cart';
 function App() {
 
   const [theme, setTheme] = useState(false);
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useState([]); // this is a declared for a product cart adding.
 
   useEffect(() => {
     setTheme(JSON.parse(window.localStorage.getItem("theme")));

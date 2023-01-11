@@ -24,7 +24,6 @@ const ProductDetails = ({setCart, cart}) => {
 
     const handelCart = (id) => {
         setCart([...cart, id])
-        console.log(id);
     }
 
     return (
