@@ -23,10 +23,7 @@ const ProductDetails = ({ setCart, cart }) => {
     }
 
     const handelCart = (id) => {
-        if (setCart([...cart, id])) {
-            setCart(cart => cart + 1)
-        }
-
+       setCart([...cart, id]) 
     }
 
     return (

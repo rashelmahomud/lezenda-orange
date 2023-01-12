@@ -31,7 +31,7 @@ function App() {
 
   return (
     <div data-theme={theme && "my_dark"} className="pt-16">
-      <Header handleThemeChange={handleThemeChange} theme={theme} setCart={setCart} cart={cart}></Header>
+      <Header handleThemeChange={handleThemeChange} theme={theme} cart={cart}></Header>
 
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
