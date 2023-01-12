@@ -31,20 +31,20 @@ function App() {
 
   return (
     <div data-theme={theme && "my_dark"} className="pt-16">
-      <Header handleThemeChange={handleThemeChange} theme={theme}></Header>
+      <Header handleThemeChange={handleThemeChange} theme={theme} setCart={setCart} cart={cart}></Header>
 
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/shop' element={<Shop></Shop>}></Route>
         <Route path='/blog' element={<Blogs></Blogs>}></Route>
         <Route path='/services' element={<Services></Services>}></Route>
-        <Route path='/detailsService/:detailsId' element={<DetailsService ></DetailsService>}></Route>
+        <Route path='/detailsService/:detailsId' element={<DetailsService setCart={setCart} cart={cart} ></DetailsService>}></Route>
         <Route path='/serviceThree' element={<ServiceThree></ServiceThree>}></Route>
         <Route path='/serviceThree/serviceThreeDetails' element={<ServiceThreeDetails></ServiceThreeDetails>}></Route>
         <Route path='/product' element={<Product></Product>}></Route>
         <Route path='/productDetails/:pdId' element={<ProductDetails setCart={setCart} cart={cart}></ProductDetails>}></Route>
         <Route path='/paymentDetails' element={<Payment />} ></Route>
-        <Route path='/cart' element={<Cart cart={cart} />}></Route>
+        <Route path='/cart' element={<Cart cart={cart} setCart={setCart} />}></Route>
 
 
 

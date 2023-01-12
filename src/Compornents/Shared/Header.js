@@ -4,7 +4,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../Assates/logo (2).png'
 
-const Header = ({ handleThemeChange, theme }) => {
+const Header = ({ handleThemeChange, theme, cart }) => {
+
 
     return (
         <div className="navbar fixed top-0 w-full font-roboto z-50 lg:px-10 bg-opacity-30 backdrop-filter backdrop-blur-lg">
@@ -85,7 +86,8 @@ const Header = ({ handleThemeChange, theme }) => {
                     {theme ? <FontAwesomeIcon className='text-green-500' icon={faSun} /> : <FontAwesomeIcon className='text-red-500' icon={faMoon} />}
                 </button>
                 {/* theme icon Ends here  */}
-                <Link to='/cart'><FontAwesomeIcon icon={faShoppingCart} /> MY CART</Link>
+                <Link to='/cart'><FontAwesomeIcon className='relative' icon={faShoppingCart} />MY CART</Link>
+                <span className='grid place-items-center absolute w-4 h-4 bg-red-500 text-white rounded-full font-bold mr-8 text-xs mr-16 mb-7'>{cart.length }</span>
             </div>
         </div>
     );

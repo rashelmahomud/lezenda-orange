@@ -1,12 +1,10 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { useQuery } from 'react-query';
 import { useParams } from 'react-router-dom';
 import { TransformComponent, TransformWrapper } from 'react-zoom-pan-pinch';
 
-import bgImg from './dService.css'
-const Service = () => {
+const Service = ({ cart, setCart }) => {
   const { detailsId } = useParams();
-  const [isZoomed, setIsZoomed] = useState(false)
+  const [setIsZoomed] = useState(false)
 
   const [count, setCount] = useState(0);
 
@@ -35,6 +33,10 @@ const Service = () => {
   const newResult = details?.find((s) => s.id === detailsId)
   console.log(newResult?.name);
 
+
+  const handelCart = (id) => {
+    setCart([...cart, id])
+  }
 
   return (
     <div className='grid lg:grid-cols-2 sm:grid-cols-1 md:grid-cols-1 lg:p-20 '>
@@ -121,7 +123,7 @@ const Service = () => {
 
             <div className=' my-3 flex gap-4'>
               <div>
-                <button className="btn rounded-none hover:bg-white hover:text-black">ADD TO CARD</button>
+                <button onClick={() => handelCart(newResult)} className="btn rounded-none hover:bg-white hover:text-black">ADD TO CARD</button>
               </div>
 
 

@@ -5,7 +5,7 @@ import { Link, useParams } from 'react-router-dom';
 import './details.css'
 
 
-const ProductDetails = ({setCart, cart}) => {
+const ProductDetails = ({ setCart, cart }) => {
 
     const { pdId } = useParams();
     const [reting, setReting] = useState('');
@@ -23,11 +23,14 @@ const ProductDetails = ({setCart, cart}) => {
     }
 
     const handelCart = (id) => {
-        setCart([...cart, id])
+        if (setCart([...cart, id])) {
+            setCart(cart => cart + 1)
+        }
+
     }
 
     return (
-       
+
         <div className='grid lg:grid-cols-2 sm:grid-cols-1 md:grid-cols-1 lg:p-20 '>
             <div className='mt-20 mx-auto text-center'>
 
@@ -136,7 +139,7 @@ const ProductDetails = ({setCart, cart}) => {
 
 
         </div>
-     
+
     );
 };
 
