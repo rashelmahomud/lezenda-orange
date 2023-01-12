@@ -10,7 +10,7 @@ const Cart = ({ cart, setCart }) => {
 
     return (
         <div className='max-w-full mx-auto'>
-            {cart?.map(p => <div>
+            {cart?.map(p => <div key={p.id}>
                 <div>
 
                     <ul className='grid lg:grid-cols-5 md:grid-cols-2 grid-cols-1 bg-gray-50 border lg:m-10 lg:p-5 m-5 p-3 place-items-center'>

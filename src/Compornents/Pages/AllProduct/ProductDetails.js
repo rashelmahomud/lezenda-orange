@@ -13,7 +13,7 @@ const ProductDetails = ({ setCart, cart }) => {
 
     const newProduct = productData?.find((pd) => pd.id === pdId);
 
-    const [count, setCount] = useState();
+    const [count, setCount] = useState(0);
 
     const handelPlus = () => {
         setCount(count => count + 1);
@@ -23,7 +23,7 @@ const ProductDetails = ({ setCart, cart }) => {
     }
 
     const handelCart = (id) => {
-       setCart([...cart, id]) 
+        setCart([...cart, id])
     }
 
     return (

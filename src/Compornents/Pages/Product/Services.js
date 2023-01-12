@@ -65,7 +65,7 @@ const Services = () => {
                     {
                         service?.map(s => <>
 
-                            <SwiperSlide className='swiperSlides '>
+                            <SwiperSlide className='swiperSlides'>
 
                                 <div className="card w-96 bg-base-100">
                                     <div onClick={() => handelDetails(s?.id)} className="card-body hover:shadow-xl hover:-translate-y-5  transform transition duration-300">
