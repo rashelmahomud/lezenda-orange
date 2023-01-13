@@ -88,7 +88,11 @@ const Header = ({ handleThemeChange, theme, cart }) => {
                 </button>
                 {/* theme icon Ends here  */}
                 <Link to='/cart'><FontAwesomeIcon className='relative' icon={faShoppingCart} />MY CART</Link>
-                <span className='grid place-items-center absolute w-4 h-4 bg-red-500 text-white rounded-full font-bold mr-8 text-xs mr-16 mb-7'>{cart.length }</span>
+
+                {
+                    cart.length ?  <span className='grid place-items-center absolute w-4 h-4 bg-red-500 text-white rounded-full font-bold mr-8 text-xs mr-16 mb-7'>{cart.length }</span> : ""
+                }
+               
             </div>
         </div>
     );
