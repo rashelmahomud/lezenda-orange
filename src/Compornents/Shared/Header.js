@@ -7,6 +7,7 @@ import logo from '../../Assates/logo (2).png'
 const Header = ({ handleThemeChange, theme, cart }) => {
 
 
+ 
 
     return (
         <div className="navbar fixed top-0 w-full font-roboto z-50 lg:px-10 bg-opacity-30 backdrop-filter backdrop-blur-lg">
