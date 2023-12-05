@@ -1,8 +1,9 @@
 # Getting Started with Create React App
 
+start for
+npm run
 React rowter-dom
 npm install react-router-dom@6
-
 
 tailwindcss
 npm install -D tailwindcss
