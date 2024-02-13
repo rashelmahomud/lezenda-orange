@@ -46,7 +46,7 @@ const Header = ({ handleThemeChange, theme, cart }) => {
             <li>
               <Link to="/shop">Shop</Link>
             </li>
-            <li tabIndex={0}>
+            <li tabIndex={0} className="w-full">
               <a className="justify-between">
                 Catagory
                 <svg
@@ -144,8 +144,105 @@ const Header = ({ handleThemeChange, theme, cart }) => {
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal p-0">
-          <li className="hover:border-b-2">
+          <li className="hover:border-b-2 duration-500">
             <Link to="/">Home</Link>
+            <ul className=" bg-gray-50 lg:w-[1000px]">
+              <li className="">
+                <div className="flex justify-between items-start p-4 gap-12 mx-auto duration-300">
+                  <ul className="p-2">
+                    <li className="flex text-1xl font-semibold">Baby Items</li>
+                    <li>
+                      <Link to="/shop">
+                        <FontAwesomeIcon
+                          className="text-yellow-500"
+                          icon={faHatCowboySide}
+                        />{" "}
+                        Jeans
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/shop">
+                        <FontAwesomeIcon
+                          className="text-blue-500"
+                          icon={faSatelliteDish}
+                        />{" "}
+                        Beauty
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/shop">
+                        <FontAwesomeIcon
+                          className="text-red-500"
+                          icon={faBaby}
+                        />{" "}
+                        Babys
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/blog">
+                        <FontAwesomeIcon
+                          className="text-black-400"
+                          icon={faBlog}
+                        />{" "}
+                        Blogs
+                      </Link>
+                    </li>
+                  </ul>
+                  <ul className="p-2  ">
+                    <li className="flex text-1xl font-semibold">Weman Items</li>
+                    <li>
+                      <Link to="/shop">
+                        <FontAwesomeIcon
+                          className="text-yellow-500"
+                          icon={faHatCowboySide}
+                        />{" "}
+                        Jeans
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/shop">
+                        <FontAwesomeIcon
+                          className="text-blue-500"
+                          icon={faSatelliteDish}
+                        />{" "}
+                        Beauty
+                      </Link>
+                    </li>
+
+                    <li>
+                      <Link to="/blog">
+                        <FontAwesomeIcon
+                          className="text-black-400"
+                          icon={faBlog}
+                        />{" "}
+                        Blogs
+                      </Link>
+                    </li>
+                  </ul>
+                  <ul className="p-2  ">
+                    <li className="flex text-1xl font-semibold">Boys Items</li>
+                    <li>
+                      <Link to="/shop">
+                        <FontAwesomeIcon
+                          className="text-yellow-500"
+                          icon={faHatCowboySide}
+                        />{" "}
+                        Jeans
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/shop">
+                        <FontAwesomeIcon
+                          className="text-blue-500"
+                          icon={faSatelliteDish}
+                        />{" "}
+                        Beauty
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
           </li>
           <li>
             <Link to="/shop">Shop</Link>
@@ -163,8 +260,9 @@ const Header = ({ handleThemeChange, theme, cart }) => {
                 <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
               </svg>
             </a>
-            <ul className="p-2">
-              <li>
+            {/* started  */}
+            <ul className="p-2  bg-red-500">
+              <li className="flex">
                 <Link to="/shop">
                   <FontAwesomeIcon className="text-green-500" icon={faShop} />{" "}
                   Shop

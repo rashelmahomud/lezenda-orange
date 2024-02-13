@@ -28,7 +28,7 @@ const Cart = ({ cart, setCart, count }) => {
                   Prise: {p.price}
                 </p>
                 <span className="text-center font-bold text-2xl">
-                  Count: {1}
+                  Count: {count}
                 </span>
               </li>
 

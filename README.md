@@ -1,7 +1,7 @@
 # Getting Started with Create React App
 
 start for
-npm run
+npm run start
 React rowter-dom
 npm install react-router-dom@6
 
