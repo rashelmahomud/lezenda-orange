@@ -13,21 +13,21 @@ const Cart = ({ cart, setCart, count }) => {
       {cart?.map((p) => (
         <div key={p.id}>
           <div>
-            <ul className="grid lg:grid-cols-5 md:grid-cols-2 grid-cols-1 bg-gray-50 border lg:m-10 lg:p-5 m-5 p-3 place-items-center">
+            <ul className="grid lg:grid-cols-5 md:grid-cols-2 grid-cols-1 border lg:m-10 lg:p-5 m-5 p-3 place-items-center">
               <li>
-                <img className="w-24" src={p.image} alt="" />
+                <img className="w-24 rounded" src={p.image} alt="cartImage" />
               </li>
               <li>
-                <h1 className="font-bold text-2xl">{p.name}</h1>
+                <h1 className="font-bold text-2xl text-gray-500">{p.name}</h1>
               </li>
               <li>
-                <h3 className="font-bold">{p.title}</h3>
+                <h3 className="font-bold text-gray-500">{p.title}</h3>
               </li>
               <li className="flex gap-3">
-                <p className="text-center font-bold text-2xl">
+                <p className="text-center font-bold text-2xl text-gray-500">
                   Prise: {p.price}
                 </p>
-                <span className="text-center font-bold text-2xl">
+                <span className="text-center font-bold text-2xl text-gray-500">
                   Count: {count}
                 </span>
               </li>

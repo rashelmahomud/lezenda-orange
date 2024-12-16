@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useQuery } from "react-query";
 import { Link, useParams } from "react-router-dom";
 import "./details.css";
@@ -14,17 +14,28 @@ const ProductDetails = ({ setCart, cart }) => {
 
   const newProduct = productData?.find((pd) => pd.id === pdId);
 
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(1);
+  const [totalPrice, setTotalPrice] = useState(0)
 
+  useEffect(() => {
+    if (newProduct) {
+      setTotalPrice(newProduct.price * count);
+    }
+  }, [newProduct, count]);
+  
   const handelPlus = () => {
     setCount((count) => count + 1);
   };
+
   const handelMinus = () => {
-    setCount((count) => count - 1);
+    if(count > 1){
+      setCount((count) => count - 1);
+    }
+    
   };
 
-  const handelCart = (id) => {
-    setCart([...cart, id]);
+  const handelCart = (newProduct) => {
+    setCart([...cart, {...newProduct, quentity: count}]);
     setIsDisabled(true);
   };
 
@@ -80,7 +91,7 @@ const ProductDetails = ({ setCart, cart }) => {
               <div>
                 <del>$21.00</del>
                 <span className="mx-2 font-bold text-2xl">
-                  ${newProduct?.price}
+                  ${totalPrice.toFixed()}
                 </span>
               </div>
               <button className="btn btn-sm rounded-full">Save-10%</button>
