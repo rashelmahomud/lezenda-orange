@@ -9,8 +9,8 @@ const Subscribe = () => {
                     <h1 className='text-4xl font-sans'>Subscribe To Our Newsletter</h1>
                     <p className='lg:text-2xl'>Sign up for the weekly newsletter and build better ecommerce stores.</p>
                     <div className='my-3'>
-                        <input type='text' placeholder="Enter email" className="input input-bordered w-full max-w-xs" />
-                        <label><button className="btn btn-outline btn-warning">SUBSCRIBE</button></label>
+                        <input type='text' placeholder="Enter email" className="input outline-none bg-white w-full max-w-xs " />
+                        <label><button className="btn text-orange-600 ">SUBSCRIBE</button></label>
                     </div>
                 </div>
             </div>
