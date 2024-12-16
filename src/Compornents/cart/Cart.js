@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-const Cart = ({ cart, setCart, count }) => {
+const Cart = ({ cart, setCart, count,totalPrice }) => {
   const navigate = useNavigate();
   const handelDelete = (id) => {
     setCart("");
@@ -25,7 +25,7 @@ const Cart = ({ cart, setCart, count }) => {
               </li>
               <li className="flex gap-3">
                 <p className="text-center font-bold text-2xl text-gray-500">
-                  Prise: {p.price}
+                  Prise: {totalPrice.toFixed()}
                 </p>
                 <span className="text-center font-bold text-2xl text-gray-500">
                   Count: {count}

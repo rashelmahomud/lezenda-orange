@@ -19,6 +19,8 @@ function App() {
   const [theme, setTheme] = useState(false);
   const [cart, setCart] = useState([]); // this is a declared for a product cart adding.
   const [count, setCount] = useState(0);
+  const [totalPrice, setTotalPrice] = useState(0) //for the total product price
+
 
   useEffect(() => {
     setTheme(JSON.parse(window.localStorage.getItem("theme")));
@@ -48,6 +50,8 @@ function App() {
             <DetailsService
               setCart={setCart}
               cart={cart}
+              totalPrice={totalPrice}
+              setTotalPrice={setTotalPrice}
               count={count}
               setCount={setCount}
             ></DetailsService>
@@ -65,13 +69,13 @@ function App() {
         <Route
           path="/productDetails/:pdId"
           element={
-            <ProductDetails setCart={setCart} cart={cart}></ProductDetails>
+            <ProductDetails setCart={setCart} setTotalPrice={setTotalPrice} cart={cart} totalPrice={totalPrice}></ProductDetails>
           }
         ></Route>
         <Route path="/paymentDetails" element={<Payment />}></Route>
         <Route
           path="/cart"
-          element={<Cart cart={cart} setCart={setCart} count={count} />}
+          element={<Cart cart={cart} setCart={setCart} setTotalPrice={setTotalPrice} totalPrice={totalPrice} count={count} />}
         ></Route>
 
         <Route path="*" element={<Forbiden />}></Route>

@@ -3,7 +3,7 @@ import { useQuery } from "react-query";
 import { Link, useParams } from "react-router-dom";
 import "./details.css";
 
-const ProductDetails = ({ setCart, cart }) => {
+const ProductDetails = ({ setCart, cart,totalPrice,setTotalPrice }) => {
   const { pdId } = useParams();
   const [reting, setReting] = useState("");
   const [isDisabled, setIsDisabled] = useState(false);
@@ -15,7 +15,6 @@ const ProductDetails = ({ setCart, cart }) => {
   const newProduct = productData?.find((pd) => pd.id === pdId);
 
   const [count, setCount] = useState(1);
-  const [totalPrice, setTotalPrice] = useState(0)
 
   useEffect(() => {
     if (newProduct) {
