@@ -1,18 +1,22 @@
 import React, { useCallback, useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { TransformComponent, TransformWrapper } from "react-zoom-pan-pinch";
 
-const Service = ({ cart, setCart, count, setCount }) => {
+const Service = ({ cart, setCart,totalPrice, setTotalPrice }) => {
   const { detailsId } = useParams();
   const [setIsZoomed] = useState(false);
   const [isDisabled, setIsDisabled] = useState(false);
 
 
+   const [count, setCount] = useState(1);
+
   const handelPlus = () => {
     setCount((count) => count + 1);
   };
   const handelMinus = () => {
-    setCount((count) => count - 1);
+    if(count > 1){
+      setCount((count) => count - 1);
+    }
   };
 
   const handleZoomChange = useCallback((shouldZoom) => {
@@ -28,10 +32,14 @@ const Service = ({ cart, setCart, count, setCount }) => {
 
   const newResult = details?.find((s) => s.id === detailsId);
 
-
+  useEffect(() => {
+    if(newResult){
+      setTotalPrice(newResult.price * count)
+    }
+  },[count,setTotalPrice, newResult])
 
   const handelCart = (id) => {
-    setCart([...cart, id]);
+    setCart([...cart,{...newResult,quentity: count} ]);
     setIsDisabled(true);
   };
 
@@ -86,7 +94,7 @@ const Service = ({ cart, setCart, count, setCount }) => {
               <div>
                 <del>$21.00</del>
                 <span className="mx-2 font-bold text-2xl">
-                  ${newResult?.price}
+                  ${totalPrice}
                 </span>
               </div>
               <button className="btn btn-sm rounded-full">Save-10%</button>
@@ -156,9 +164,11 @@ const Service = ({ cart, setCart, count, setCount }) => {
             </div>
 
             <div>
+              <Link to="/paymentDetails">
               <button className="btn w-full bg-yellow-200 text-black border-none hover:text-white my-3">
                 BUY IT NOW
               </button>
+              </Link>
             </div>
           </div>
         </div>

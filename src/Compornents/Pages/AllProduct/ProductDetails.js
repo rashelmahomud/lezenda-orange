@@ -20,7 +20,7 @@ const ProductDetails = ({ setCart, cart,totalPrice,setTotalPrice }) => {
     if (newProduct) {
       setTotalPrice(newProduct.price * count);
     }
-  }, [newProduct, count]);
+  }, [newProduct, count, setTotalPrice]);
   
   const handelPlus = () => {
     setCount((count) => count + 1);
