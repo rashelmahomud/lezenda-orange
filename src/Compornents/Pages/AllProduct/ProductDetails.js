@@ -34,7 +34,7 @@ const ProductDetails = ({ setCart, cart,totalPrice,setTotalPrice }) => {
   };
 
   const handelCart = (newProduct) => {
-    setCart([...cart, {...newProduct, quentity: count}]);
+    setCart([...cart, {...newProduct, quentity: count}],);
     setIsDisabled(true);
   };
 

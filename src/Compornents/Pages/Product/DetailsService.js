@@ -7,7 +7,6 @@ const Service = ({ cart, setCart, count, setCount }) => {
   const [setIsZoomed] = useState(false);
   const [isDisabled, setIsDisabled] = useState(false);
 
-  // const [count, setCount] = useState(0);
 
   const handelPlus = () => {
     setCount((count) => count + 1);
@@ -28,7 +27,8 @@ const Service = ({ cart, setCart, count, setCount }) => {
   }, []);
 
   const newResult = details?.find((s) => s.id === detailsId);
-  console.log(newResult?.name);
+
+
 
   const handelCart = (id) => {
     setCart([...cart, id]);

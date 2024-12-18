@@ -1,13 +1,18 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-const Cart = ({ cart, setCart, count,totalPrice }) => {
+const Cart = ({ cart, setCart }) => {
   const navigate = useNavigate();
-  const handelDelete = (id) => {
-    setCart("");
-    navigate("/shop");
-  };
 
+  const handelDelete = (id) => {
+    const update = cart.filter((item) => item.id !== id)
+    setCart(update);
+    if(update.length === 0){
+      navigate('/shop')
+    }
+  };
+  const costs = cart.reduce((total,cost) => total + cost.price * cost.quentity, 1)
+ 
   return (
     <div className="max-w-full mx-auto">
       {cart?.map((p) => (
@@ -25,19 +30,14 @@ const Cart = ({ cart, setCart, count,totalPrice }) => {
               </li>
               <li className="flex gap-3">
                 <p className="text-center font-bold text-2xl text-gray-500">
-                  Prise: {totalPrice.toFixed()}
+                  total: {(p.price * p.quentity).toFixed()}
                 </p>
                 <span className="text-center font-bold text-2xl text-gray-500">
-                  Count: {count}
+                  Count: {p.quentity}
                 </span>
               </li>
 
               <div>
-                <Link to="/paymentDetails">
-                  <button className="bg-blue-400 px-3 py-2 text-white font-bold m-2">
-                    PAYMENT
-                  </button>
-                </Link>
                 <button
                   onClick={() => handelDelete(p.id)}
                   className="bg-red-400 px-3 py-2 text-white font-bold"
@@ -49,6 +49,15 @@ const Cart = ({ cart, setCart, count,totalPrice }) => {
           </div>
         </div>
       ))}
+      <div className="container text-center  p-10">
+        <h2 className="font-semibold">Delivery Cost : $ 70</h2>
+        <p className="font-bold"> Total Price {(costs + 70).toFixed(2)}</p>
+        <Link to="/paymentDetails">
+                  <button className="bg-blue-400 px-3 py-2 text-white font-bold m-2">
+                    PAYMENT
+                  </button>
+                </Link>
+        </div>
     </div>
   );
 };
